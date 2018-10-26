@@ -1,0 +1,209 @@
+<div id="app" style="width: 100%; float: left; background-color: #FFF;">
+         <section id="bg-register-property" class="bg-paginas grid-12">
+            <div class="breadcrumb">
+               <div class="grid-12 background-theme-color">
+                  <div class="container">
+                     <div class="col-xs-12">
+                        <ol>
+                           <li><a href="index.html">Página Inicial</a></li>
+                           <li class="active">Cadastre seu Imóvel</li>
+                        </ol>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="bg-header grid-12">
+               <div class="container">
+                  <div class="col-xs-12">
+                     <h1>Anuncie seu imóvel <b>AQUI</b></h1>
+                  </div>
+               </div>
+            </div>
+            <div class="grid-12 content-page">
+               <div class="container">
+                  <form method="POST" action="https://www.imobileonline.com.br/cadastre-seu-imovel.html" accept-charset="UTF-8" id="frmCadastro" class="form form-custom" enctype="multipart/form-data">
+                     <input name="_token" type="hidden" value="qruws7AuGP2pgHbrPDN9JE6Mr58eZ1ohgLl3Ic0K">
+                     <input type="hidden" name="_nome_">
+                     <input type="hidden" name="_email_">
+                     <div class="content-step content-step-1">
+                        <div class="col-xs-12">
+                           <div class="steps">
+                              <span class="font-theme-color"><b class="background-theme-color">1</b>Proprietário</span>
+                              <i class="step-1 inactive"></i>
+                              <span class="inactive"><b>3</b>Fotos</span>
+                              <i class="step-2 inactive"></i>
+                              <span class="inactive"><b>2</b>Características</span>
+                           </div>
+                        </div>
+                        <div class="col-sm-12 col-xs-12">
+                           <input placeholder="Nome*" class="form-control" required="required" id="registerYourProperty-nome" name="nome" type="text" value="">
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                           <input placeholder="Celular" class="form-control telephoneMask" id="registerYourProperty-celular" name="celular" type="text" value="">
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                           <input placeholder="Telefone" class="form-control telephoneMask" id="registerYourProperty-telefone" name="telefone" type="text" value="">
+                        </div>
+                        <div class="col-xs-12">
+                           <input placeholder="E-mail" class="form-control" id="registerYourProperty-email" name="email" type="email" value="">
+                        </div>
+                        <div class="col-xs-6 pull-right">
+                           <a href="javascript:void(0);" class="background-theme-color hover-background-theme-color next">Próximo</a>
+                        </div>
+                     </div>
+                     <div class="content-step content-step-2">
+                        <div class="col-xs-12">
+                           <div class="steps">
+                              <span class="font-theme-color"><b class="background-theme-color">1</b>Proprietário</span>
+                              <i class="step-1 background-theme-color"></i>
+                              <span class="inactive"><b>3</b>Fotos</span>
+                              <i class="step-2 inactive"></i>
+                              <span class="font-theme-color"><b class="background-theme-color">2</b>Características</span>
+                           </div>
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                           <input placeholder="Tipo de Im&oacute;vel (Ex: Casa)" class="form-control" id="registerYourProperty-tipo" name="tipo" type="text" value="">
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                           <input placeholder="Sub-tipo (Ex: Sobrado)" class="form-control" id="registerYourProperty-subtipo" name="subtipo" type="text" value="">
+                        </div>
+                        <div class="grid-12">
+                           <div class="col-sm-4 col-xs-12">
+                              <div class="checkbox-inline">
+                                 <input id="venda" class="disponibilidade" name="disponibilidade[venda]" type="checkbox" value="Venda">
+                                 <label for="venda">Para venda</label>
+                              </div>
+                              <div id="vendaDados">
+                                 <input placeholder="Valor Venda (Aproximadamente)" class="form-control valor" id="valor_venda" name="valor[venda]" type="text" value="">
+                              </div>
+                           </div>
+                           <div class="col-sm-4 col-xs-12">
+                              <div class="checkbox-inline">
+                                 <input id="locacao" class="disponibilidade" name="disponibilidade[locacao]" type="checkbox" value="Locacao">
+                                 <label for="locacao">Para loca&ccedil;&atilde;o</label>
+                              </div>
+                              <div id="locacaoDados">
+                                 <input placeholder="Valor Loca&ccedil;&atilde;o (Aproximadamente)" class="form-control valor" id="valor_locacao" name="valor[locacao]" type="text" value="">
+                              </div>
+                           </div>
+                           <div class="col-sm-4 col-xs-12">
+                              <div class="checkbox-inline">
+                                 <input id="temporada" class="disponibilidade" name="disponibilidade[temporada]" type="checkbox" value="Temporada">
+                                 <label for="temporada">Para temporada</label>
+                              </div>
+                              <div id="temporadaDados">
+                                 <input placeholder="Valor Temporada (di&aacute;ria)" class="form-control valor" id="valor_temporada" name="valor[temporada]" type="text" value="">
+                              </div>
+                           </div>
+                        </div>
+                        <div class="col-sm-12 col-xs-12">
+                           <input placeholder="Nome do condom&iacute;nio/edif&iacute;cio" class="form-control" id="registerYourProperty-nomeCondominio" name="nomeCondominio" type="text" value="">
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                           <input placeholder="Valor do condom&iacute;nio" class="form-control valor" id="registerYourProperty-valorCondominio" name="valorCondominio" type="text" value="">
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                           <input placeholder="Valor do IPTU" class="form-control valor" id="registerYourProperty-valorIPTU" name="valorIPTU" type="text" value="">
+                        </div>
+                        <div class="col-xs-12">
+                           <div class="checkbox-inline">
+                              <input id="financiamento" class="" name="financiamento" type="checkbox" value="Financiamento">
+                              <label for="financiamento">Aceita financiamento?</label>
+                           </div>
+                        </div>
+                        <div class="col-sm-12 col-xs-12">
+                           <input placeholder="Endere&ccedil;o*" class="form-control" required="required" id="registerYourProperty-endereco" name="endereco" type="text" value="">
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                           <input placeholder="&Aacute;rea total/terreno" class="form-control" id="registerYourProperty-areaTotal" name="areaTotal" type="text" value="">
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                           <input placeholder="&Aacute;rea &uacute;til/constru&iacute;da" class="form-control" id="registerYourProperty-areaUtil" name="areaUtil" type="text" value="">
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                           <input placeholder="Dormit&oacute;rios" class="form-control" id="registerYourProperty-dormitorios" name="dormitorios" type="text" value="">
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                           <input placeholder="Su&iacute;tes" class="form-control" id="registerYourProperty-suites" name="suites" type="text" value="">
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                           <input placeholder="Vagas" class="form-control" id="registerYourProperty-vagas" name="vagas" type="text" value="">
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                           <div class="checkbox-inline">
+                              &nbsp;<br/>
+                              <input id="mobiliado" class="" name="mobiliado" type="checkbox" value="Sim">
+                              <label for="mobiliado">Mobiliado?</label>
+                           </div>
+                        </div>
+                        <div class="col-xs-12">
+                           <textarea placeholder="Outras informa&ccedil;&otilde;es" class="form-control" cols="36" rows="3" id="registerYourProperty-descricao" name="descricao"></textarea>
+                        </div>
+                        <div class="col-xs-6 pull-left">
+                           <a href="javascript:void(0);" class="prev">Voltar</a>
+                        </div>
+                        <div class="col-xs-6 pull-right">
+                           <a href="javascript:void(0);" class="background-theme-color hover-background-theme-color next">Próximo</a>
+                        </div>
+                     </div>
+                     <div class="content-step content-step-3">
+                        <div class="col-xs-12">
+                           <div class="steps">
+                              <span class="font-theme-color"><b class="background-theme-color">1</b>Proprietário</span>
+                              <i class="step-1 background-theme-color"></i>
+                              <span class="font-theme-color"><b class="background-theme-color">3</b>Fotos</span>
+                              <i class="step-2 background-theme-color"></i>
+                              <span class="font-theme-color"><b class="background-theme-color">2</b>Características</span>
+                           </div>
+                        </div>
+                        <div class="form-group col-xs-12">
+                           <div id="fotosContainer" class="form-group">
+                              <span class="text-danger">Selecione as fotos para serem anexadas na mensagem. <b>Atenção: Limite máximo de 5 fotos.</b></span>
+                              <input type="file" name="file1[]" id="fileFotos" class="max-5 accept-jpg maxsize-2048">
+                           </div>
+                        </div>
+                        <input type="hidden" name="linkPagina" id="linkPagina" value="cadastre-seu-imovel.html">
+                        <div class="form-group col-xs-12">
+                           <div class="checkbox-inline">
+                              <input id="autorizacao" class="autorizacao" required="required" name="autorizacao" type="checkbox" value="autorizacao">
+                              <label for="autorizacao">Eu autorizo a Imobile Online a promover a intermedia&ccedil;&atilde;o de venda e/ou loca&ccedil;&atilde;o do im&oacute;vel de minha propriedade supra citado.</label>
+                           </div>
+                        </div>
+                        <div class="row">
+                           <div class="col-xs-12" style="margin-bottom:15px;margin-left: 13px">
+                              <div class="g-recaptcha" data-sitekey="6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"></div>
+                              <noscript>
+                                 <div>
+                                    <div style="width: 302px; height: 422px; position: relative;">
+                                       <div style="width: 302px; height: 422px; position: absolute;">
+                                          <iframe src="https://www.google.com/recaptcha/api/fallback?k=6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"
+                                             frameborder="0" scrolling="no"
+                                             style="width: 302px; height:422px; border-style: none;">
+                                          </iframe>
+                                       </div>
+                                    </div>
+                                    <div style="width: 300px; height: 60px; border-style: none;
+                                       bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                                       background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                                       <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                          class="g-recaptcha-response"
+                                          style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                                          margin: 10px 25px; padding: 0px; resize: none;" >
+                                       </textarea>
+                                    </div>
+                                 </div>
+                              </noscript>
+                           </div>
+                        </div>
+                        <div class="form-group col-xs-12">
+                           <input class="background-theme-color hover-background-theme-color btn-track" id="btn-register-property" disabled="disabled" type="submit" value="Enviar">
+                        </div>
+                        <div class="col-xs-6 pull-left">
+                           <a href="javascript:void(0);" class="prev">Voltar</a>
+                        </div>
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </section>
+      </div>

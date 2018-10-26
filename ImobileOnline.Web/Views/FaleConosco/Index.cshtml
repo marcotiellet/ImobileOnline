@@ -1,0 +1,129 @@
+
+      <div id="app" style="width: 100%; float: left; background-color: #FFF;">
+         <section id="bg-contact" class="bg-paginas grid-12">
+            <div class="breadcrumb">
+               <div class="grid-12">
+                  <div class="container">
+                     <div class="col-xs-12">
+                        <ol>
+                           <li><a href="index.html">Página Inicial</a></li>
+                           <li class="active">Fale Conosco</li>
+                        </ol>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="map grid-12">
+               <iframe src="https://www.google.com.br/maps?q=Rua+Tuparetama%2C+n%C2%BA+156%2C+Artur+Lundgren+I%2C+Paulista+-+PE&amp;output=embed" width="100%" height="290px" frameborder="0" style="border:0"></iframe>
+               <span>Rua Tuparetama, nº 156, Artur Lundgren I, Paulista - PE</span>
+            </div>
+            <div class="bg-header grid-12">
+               <div class="container">
+                  <div class="col-xs-12">
+                     <h1>Entre em contato</h1>
+                  </div>
+               </div>
+            </div>
+            <div class="grid-12 content-page">
+               <div class="container">
+                  <div class="col-sm-8 col-xs-12 no-padding-horizontal">
+                     <form method="POST" action="https://www.imobileonline.com.br/fale-conosco.html" accept-charset="UTF-8" id="frmFaleConosco" class="form form-custom">
+                        <input name="_token" type="hidden" value="qruws7AuGP2pgHbrPDN9JE6Mr58eZ1ohgLl3Ic0K">
+                        <div class="form-group grid-12">
+                           <div class="col-sm-6 col-xs-12">
+                              <input placeholder="Nome" class="form-control" required="required" id="contact-nome" name="nome" type="text" value="">
+                           </div>
+                           <div class="col-sm-6 col-xs-12">
+                              <input placeholder="Telefone" class="form-control telephoneMask" id="contact-telefone" name="telefone" type="text" value="">
+                           </div>
+                        </div>
+                        <div class="form-group grid-12">
+                           <div class="col-md-3 col-sm-6 col-xs-12">
+                              <input placeholder="Celular 1" class="form-control telephoneMask" id="contact-celular1" name="celular1" type="text" value="">
+                           </div>
+                           <div class="col-md-3 col-sm-6 col-xs-12">
+                              <input placeholder="Operadora" class="form-control" id="contact-operadora1" name="operadora1" type="text" value="">
+                           </div>
+                           <div class="col-md-3 col-sm-6 col-xs-12">
+                              <input placeholder="Celular 2" class="form-control telephoneMask" id="contact-celular2" name="celular2" type="text" value="">
+                           </div>
+                           <div class="col-md-3 col-sm-6 col-xs-12">
+                              <input placeholder="Operadora" class="form-control" id="contact-operadora2" name="operadora2" type="text" value="">
+                           </div>
+                        </div>
+                        <div class="form-group col-xs-12">
+                           <input placeholder="E-mail" class="form-control" required="required" id="contact-email" name="email" type="email" value="">
+                        </div>
+                        <div class="form-group col-xs-12">
+                           <textarea placeholder="D&uacute;vidas e/ou Coment&aacute;rios" class="form-control" cols="36" rows="3" name="mensagem"></textarea>
+                        </div>
+                        <div class="form-group col-xs-12">
+                           <span>Entrar em contato por:</span>
+                           <div class="radio-inline">
+                              <input id="contact-whatsapp" name="contactWhatsapp" type="checkbox" value="Whatsapp">
+                              <i class="fa fa-whatsapp" aria-hidden="true"></i>
+                              <label for="contact-whatsapp">Whatsapp</label>
+                           </div>
+                           <div class="radio-inline">
+                              <input id="contact-phone" name="contactPhone" type="checkbox" value="Telefone">
+                              <i class="fa fa-phone" aria-hidden="true"></i>
+                              <label for="contact-phone">Telefone</label>
+                           </div>
+                           <div class="radio-inline">
+                              <input id="contact-mail" name="contactMail" type="checkbox" value="E-mail">
+                              <i class="fa fa-envelope" aria-hidden="true"></i>
+                              <label for="contact-mail">E-mail</label>
+                           </div>
+                        </div>
+                        <input type="hidden" name="linkPagina" id="linkPagina" value="fale-conosco.html">
+                        <div class="row">
+                           <div class="col-xs-12" style="margin-bottom:15px;margin-left: 13px">
+                              <div class="g-recaptcha" data-sitekey="6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"></div>
+                              <noscript>
+                                 <div>
+                                    <div style="width: 302px; height: 422px; position: relative;">
+                                       <div style="width: 302px; height: 422px; position: absolute;">
+                                          <iframe src="https://www.google.com/recaptcha/api/fallback?k=6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"
+                                             frameborder="0" scrolling="no"
+                                             style="width: 302px; height:422px; border-style: none;">
+                                          </iframe>
+                                       </div>
+                                    </div>
+                                    <div style="width: 300px; height: 60px; border-style: none;
+                                       bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                                       background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                                       <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                          class="g-recaptcha-response"
+                                          style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                                          margin: 10px 25px; padding: 0px; resize: none;" >
+                                       </textarea>
+                                    </div>
+                                 </div>
+                              </noscript>
+                           </div>
+                        </div>
+                        <div class="form-group col-xs-12">
+                           <input class="background-theme-color hover-background-theme-color btn-track" id="btn-contact" type="submit" value="Enviar Mensagem">
+                        </div>
+                     </form>
+                  </div>
+                  <div class="col-sm-4 col-xs-12">
+                     <ul class="phone">
+                        <li><span>(81) 98807-7025</span></li>
+                     </ul>
+                  </div>
+                  <div class="col-xs-12">
+                     <ul class="socials">
+                        <li class="facebook"><a href="https://www.facebook.com/imobileon/" target="_blank"><i class="fa fa-facebook"></i> facebook</a></li>
+                        <li class="twitter"><a href="https://twitter.com/imobileon" target="_blank"><i class="fa fa-twitter"></i> twitter</a></li>
+                        <li class="google-plus"><a href="https://plus.google.com/+BalcaodeservicoBrRecife" target="_blank"><i class="fa fa-google-plus"></i> google plus</a></li>
+                        <li class="youtube"><a href="https://www.youtube.com/c/BalcaodeservicoBrRecife" target="_blank"><i class="fa fa-youtube"></i> youtube</a></li>
+                        <li class="instagram"><a href="https://www.instagram.com/imobile.online/?hl=pt-br" target="_blank"><i class="fa fa-instagram"></i> instagram</a></li>
+                        <li class="rss"><a href="feed.xml" target="_blank"><i class="fa fa-rss"></i> Feed</a></li>
+                     </ul>
+                  </div>
+               </div>
+            </div>
+         </section>
+      </div>
+      

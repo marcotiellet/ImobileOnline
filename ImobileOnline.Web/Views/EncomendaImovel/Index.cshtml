@@ -1,0 +1,155 @@
+
+      <div id="app" style="width: 100%; float: left; background-color: #FFF;">
+         <section class="bg-paginas grid-12">
+            <div class="breadcrumb">
+               <div class="grid-12 background-theme-color">
+                  <div class="container">
+                     <div class="col-xs-12">
+                        <ol>
+                           <li><a href="index.html">Página Inicial</a></li>
+                           <li class="active">Imóvel sob Encomenda</li>
+                        </ol>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="bg-header grid-12">
+               <div class="container">
+                  <div class="col-xs-12">
+                     <h1>Imóvel sob Encomenda</h1>
+                  </div>
+               </div>
+            </div>
+            <div class="grid-12 content-page">
+               <div class="container">
+                  <form method="POST" action="https://www.imobileonline.com.br/encomende-seu-imovel.html" accept-charset="UTF-8" id="frmEncomenda" class="form form-custom">
+                     <input name="_token" type="hidden" value="qruws7AuGP2pgHbrPDN9JE6Mr58eZ1ohgLl3Ic0K">
+                     <div class="form-group grid-12">
+                        <div class="col-sm-6 col-xs-12">
+                           <input placeholder="Nome" class="form-control" required="required" id="orderYourProperty-nome" name="nome" type="text" value="">
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                           <input placeholder="Telefone" class="form-control telephoneMask" required="required" id="orderYourProperty-telefone" name="telefone" type="text" value="">
+                        </div>
+                     </div>
+                     <div class="form-group col-xs-12">
+                        <input placeholder="E-mail" class="form-control" required="required" id="orderYourProperty-email" name="email" type="email" value="">
+                     </div>
+                     <div class="form-group grid-12">
+                        <div class="col-sm-6 col-xs-12">
+                           <input placeholder="Tipo de Im&oacute;vel (Ex: Casa)" class="form-control" id="orderYourProperty-tipo" name="tipo" type="text" value="">
+                        </div>
+                        <div class="col-sm-6 col-xs-12">
+                           <input placeholder="Cidade" class="form-control" id="orderYourProperty-cidade" name="cidade" type="text" value="">
+                        </div>
+                     </div>
+                     <div class="form-group col-xs-12">
+                        <textarea placeholder="Descreva o Im&oacute;vel" class="form-control" cols="36" rows="5" id="orderYourProperty-descricao" name="descricao"></textarea>
+                     </div>
+                     <div class="form-group col-xs-12">
+                        <p>Disponibilidade: </p>
+                        <div class="checkbox-inline">
+                           <input id="venda" class="disponibilidade" name="disponibilidade[venda]" type="checkbox" value="Venda">
+                           <label for="venda">Venda</label>
+                        </div>
+                        <div class="checkbox-inline">
+                           <input id="locacao" class="disponibilidade" name="disponibilidade[locacao]" type="checkbox" value="Locacao">
+                           <label for="locacao">Loca&ccedil;&atilde;o</label>
+                        </div>
+                        <div class="checkbox-inline">
+                           <input id="temporada" class="disponibilidade" name="disponibilidade[temporada]" type="checkbox" value="Temporada">
+                           <label for="temporada">Temporada</label>
+                        </div>
+                     </div>
+                     <div id="vendaDados">
+                        <div class="form-group col-xs-12">
+                           <hr>
+                           <input placeholder="Valor Venda (Aproximadamente)" class="form-control valor" id="valor_venda" name="valor[venda]" type="text" value="">
+                        </div>
+                        <div class="form-group col-xs-12">
+                           <p>Disponho de: </p>
+                           <div class="checkbox-inline">
+                              <input id="posse_auto" name="posse[auto]" type="checkbox" value="posse_auto">
+                              <label for="posse_auto">Autom&oacute;vel</label>
+                           </div>
+                           <div class="checkbox-inline">
+                              <input id="posse_credito" name="posse[credito]" type="checkbox" value="posse_credito">
+                              <label for="posse_credito">Carta de Cr&eacute;dito/FGTS</label>
+                           </div>
+                           <div class="checkbox-inline">
+                              <input id="posse_imovel" name="posse[imovel]" type="checkbox" value="posse_imovel">
+                              <label for="posse_imovel">Im&oacute;vel menor valor</label>
+                           </div>
+                        </div>
+                        <div class="form-group col-xs-12">
+                           <p>Financiamento: </p>
+                           <div class="checkbox-inline">
+                              <input id="financiamento" class="disponibilidade" name="financiamento" type="checkbox" value="financiamento">
+                              <label for="financiamento">em no m&iacute;nimo</label>
+                           </div>
+                           <div class="checkbox-inline">
+                              <input placeholder="Vezes" class="form-control" id="financiamentoVezes" disabled="disabled" name="financiamentoVezes" type="text" value="">
+                           </div>
+                        </div>
+                     </div>
+                     <div id="locacaoDados">
+                        <div class="form-group col-xs-12">
+                           <hr>
+                           <input placeholder="Valor Loca&ccedil;&atilde;o (Aproximadamente)" class="form-control valor" id="valor_locacao" name="valor[locacao]" type="text" value="">
+                        </div>
+                        <div class="form-group col-xs-12">
+                           <p>Garantia: </p>
+                           <div class="checkbox-inline">
+                              <input id="garantia_seguro" class="disponibilidade" name="garantia[seguro]" type="checkbox" value="garantia_seguro">
+                              <label for="garantia_seguro">Seguro Fian&ccedil;a</label>
+                           </div>
+                           <div class="checkbox-inline">
+                              <input id="garantia_fiador" class="disponibilidade" name="garantia[fiador]" type="checkbox" value="garantia_fiador">
+                              <label for="garantia_fiador">Fiador</label>
+                           </div>
+                           <div class="checkbox-inline">
+                              <input id="garantia_deposito" class="disponibilidade" name="garantia[deposito]" type="checkbox" value="garantia_deposito">
+                              <label for="garantia_deposito">Dep&oacute;sito</label>
+                           </div>
+                        </div>
+                     </div>
+                     <div id="temporadaDados">
+                        <div class="form-group col-xs-12">
+                           <hr>
+                           <input placeholder="Valor Temporada (di&aacute;ria)" class="form-control valor" id="valor_temporada" name="valor[temporada]" type="text" value="">
+                        </div>
+                     </div>
+                     <div class="row">
+                        <div class="col-xs-12" style="margin-bottom:15px;margin-left: 13px">
+                           <div class="g-recaptcha" data-sitekey="6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"></div>
+                           <noscript>
+                              <div>
+                                 <div style="width: 302px; height: 422px; position: relative;">
+                                    <div style="width: 302px; height: 422px; position: absolute;">
+                                       <iframe src="https://www.google.com/recaptcha/api/fallback?k=6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"
+                                          frameborder="0" scrolling="no"
+                                          style="width: 302px; height:422px; border-style: none;">
+                                       </iframe>
+                                    </div>
+                                 </div>
+                                 <div style="width: 300px; height: 60px; border-style: none;
+                                    bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                                    background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                                    <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                       class="g-recaptcha-response"
+                                       style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                                       margin: 10px 25px; padding: 0px; resize: none;" >
+                                    </textarea>
+                                 </div>
+                              </div>
+                           </noscript>
+                        </div>
+                     </div>
+                     <div class="form-group col-xs-6">
+                        <input class="background-theme-color hover-background-theme-color btn-track" id="btn-order-property" type="submit" value="Enviar">
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </section>
+      </div>

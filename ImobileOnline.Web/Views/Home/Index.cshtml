@@ -1,94 +1,1240 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
-
-<div id="myCarousel" class="carousel slide" data-ride="carousel" data-interval="6000">
-    <ol class="carousel-indicators">
-        <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
-        <li data-target="#myCarousel" data-slide-to="1"></li>
-        <li data-target="#myCarousel" data-slide-to="2"></li>
-    </ol>
-    <div class="carousel-inner" role="listbox">
-        <div class="item active">
-            <img src="~/images/banner1.svg" alt="ASP.NET" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how to build ASP.NET apps that can run anywhere.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525028&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner2.svg" alt="Visual Studio" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    There are powerful new features in Visual Studio for building modern web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525030&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-        <div class="item">
-            <img src="~/images/banner3.svg" alt="Microsoft Azure" class="img-responsive" />
-            <div class="carousel-caption" role="option">
-                <p>
-                    Learn how Microsoft's Azure cloud platform allows you to build, deploy, and scale web apps.
-                    <a class="btn btn-default" href="https://go.microsoft.com/fwlink/?LinkID=525027&clcid=0x409">
-                        Learn More
-                    </a>
-                </p>
-            </div>
-        </div>
-    </div>
-    <a class="left carousel-control" href="#myCarousel" role="button" data-slide="prev">
-        <span class="glyphicon glyphicon-chevron-left" aria-hidden="true"></span>
-        <span class="sr-only">Previous</span>
-    </a>
-    <a class="right carousel-control" href="#myCarousel" role="button" data-slide="next">
-        <span class="glyphicon glyphicon-chevron-right" aria-hidden="true"></span>
-        <span class="sr-only">Next</span>
-    </a>
-</div>
-
-<div class="row">
-    <div class="col-md-3">
-        <h2>Application uses</h2>
-        <ul>
-            <li>Sample pages using ASP.NET Core MVC</li>
-            <li>Theming using <a href="https://go.microsoft.com/fwlink/?LinkID=398939">Bootstrap</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>How to</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398600">Add a Controller and View</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699315">Manage User Secrets using Secret Manager.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699316">Use logging to log a message.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699317">Add packages using NuGet.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699319">Target development, staging or production environment.</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Overview</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=518008">Conceptual overview of what is ASP.NET Core</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=699320">Fundamentals of ASP.NET Core such as Startup and middleware.</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398602">Working with Data</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkId=398603">Security</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699321">Client side development</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699322">Develop on different platforms</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=699323">Read more on the documentation site</a></li>
-        </ul>
-    </div>
-    <div class="col-md-3">
-        <h2>Run &amp; Deploy</h2>
-        <ul>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517851">Run your app</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=517853">Run tools such as EF migrations and more</a></li>
-            <li><a href="https://go.microsoft.com/fwlink/?LinkID=398609">Publish to Microsoft Azure Web Apps</a></li>
-        </ul>
-    </div>
-</div>
+      <div id="app" style="width: 100%; float: left; background-color: #FFF;">
+         <div class="hidden-xs">
+            <style> #bg-banner{ position: relative; background-color: #FFF; } #bg-banner .banner-destaque{ margin: 20px 0; } #bg-banner .banner-destaque article{ border: 1px solid #DDDDDD; padding: 15px; } #bg-banner .banner-destaque article > a{ position: absolute; width: 100%; height: 100%; z-index: 1; top: 0; left: 0; text-indent: -9999px; overflow: hidden; } #bg-banner .banner-destaque article .image-banner{ position: relative; } #bg-banner .banner-destaque article .image-banner .mark{ display: none; } #bg-banner .banner-destaque article .image-banner img{ width: 100%; height: 395px; margin: 0 auto; display: table; } #bg-banner .banner-destaque article .image-banner .description{ position: absolute; z-index: 2; width: 100%; bottom: 0; left: 0; background: transparent; /* For browsers that do not support gradients */ background: -webkit-linear-gradient(transparent, #000); /* For Safari 5.1 to 6.0 */ background: -o-linear-gradient(transparent, #000); /* For Opera 11.1 to 12.0 */ background: -moz-linear-gradient(transparent, #000); /* For Firefox 3.6 to 15 */ background: linear-gradient(transparent, #000); /* Standard syntax */ } #bg-banner .banner-destaque .description p{ width: 100%; float: left; margin: 0 0 10px 0; } #bg-banner .banner-destaque .description p span{ min-width: 110px; height: 26px; float: left; margin: 0 20px; padding: 4px 10px; color: #FFF; font-weight: 900; text-align: center; text-transform: uppercase; } #bg-banner .banner-destaque .description p span.step{ margin-top: 25px; } #bg-banner .banner-destaque .description p.inactive span{ background-color: #CCCCCC!important; } #bg-banner .banner-destaque .description p b{ float: left; font-weight: 900; font-size: 20px; color: #FFF; text-shadow: 1px 1px 0 #000; } #bg-banner .banner-destaque .description p b small{ font-size: 12px; margin-left: 5px; } #bg-banner .banner-destaque .description p.inactive b{ color: #CCCCCC; } #bg-banner .banner-destaque article .content-box{ background-color: #DDDDDD; min-height: 395px; } #bg-banner .banner-destaque article .content-box h2{ width: 100%; float: left; position: relative; margin: 25px 0 0 0; padding: 0 15px 15px 15px; font-size: 20px; font-weight: 400; } #bg-banner .banner-destaque article .content-box h2:before, #bg-banner .banner-destaque article .content-box h2:after{ content: ''; width: 95%; position: absolute; z-index: 2; left: 10px; } #bg-banner .banner-destaque article .content-box h2:before{ bottom: 0; border-bottom: 1px solid rgba(68, 68, 68, 0.20); } #bg-banner .banner-destaque article .content-box h2:after{ bottom: -1px; border-bottom: 1px solid #F9F9F9; } #bg-banner .banner-destaque article .content-box h2 b{ font-weight: 600; font-size: 20px; } #bg-banner .banner-destaque article .content-box h2 span{ width: 100%; float: left; margin: 5px 0 0 0; font-size: 14px; line-height: 17px; } #bg-banner .banner-destaque article .content-box h2 i{ float: left; font-size: 17px; line-height: 17px; margin-right: 5px; } #bg-banner .banner-destaque article .content-box h2 p{ width: auto; float: left; margin: 10px 0 0 0; background-color: #666666; border-radius: 3px; line-height: 30px; padding: 0 10px; font-weight: 900; font-size: 13px; color: #FFF; } #bg-banner .banner-destaque article .content-box ul{ width: 100%; float: left; margin: 0; position: relative; padding: 14px 15px 0 15px; } #bg-banner .banner-destaque article .content-box ul:before, #bg-banner .banner-destaque article .content-box ul:after{ content: ''; width: 95%; position: absolute; z-index: 2; left: 10px; } #bg-banner .banner-destaque article .content-box ul:before{ bottom: 0; border-bottom: 1px solid rgba(68, 68, 68, 0.20); } #bg-banner .banner-destaque article .content-box ul:after{ bottom: -1px; border-bottom: 1px solid #F9F9F9; } #bg-banner .banner-destaque article .content-box ul li{ float: left; list-style: none; margin: 0 0 14px 0; text-align: center; } #bg-banner .banner-destaque article .content-box ul li i{ font-size: 12px; } #bg-banner .banner-destaque article .content-box ul li span{ font-size: 14px; } #bg-banner .banner-destaque article .content-box ul li b{ font-size: 15px; } #bg-banner .banner-destaque article .content-box > p{ width: 100%; min-height: 60px; float: left; margin: 25px 0; padding: 0 15px; font-size: 14px; } #bg-banner .banner-destaque article .content-box > a{ height: 45px; line-height: 45px; font-weight: 600; text-align: center; padding: 0 20px; border-radius: 3px; position: relative; z-index: 2; text-transform: uppercase; } #bg-banner .banner-destaque article .content-box > a:hover{ text-decoration: none; } #bg-banner .banner-destaque article .content-box > a i{ margin-right: 5px; } #bg-banner .banner-destaque article .content-box > a:first-of-type{ float: left; color: #FFF; margin-left: 5%; } #bg-banner .banner-destaque article .content-box > a:last-of-type{ float: right; color: #333; background-color: #FFF; margin-right: 5%; } #bg-banner .banner-destaque article .content-box > a:last-of-type:hover{ background-color: rgba(255, 255, 255, 0.80); } #bg-banner .banner-destaque .owl-controls .owl-pagination .owl-page span{ width: 11px; height: 11px; border-radius: 0; opacity: 1; } @@media (min-width: 320px) { #bg-banner .banner-destaque article .content-box ul li.small-item{ width: 33%; } #bg-banner .banner-destaque article .content-box ul li.medium-item{ width: 25%; } #bg-banner .banner-destaque article .content-box ul li.big-item{ width: 33%; } #bg-banner .banner-destaque .owl-controls .owl-pagination .owl-page span{ background-color: #CCC; } #bg-banner .banner-destaque .owl-controls .owl-pagination .active span{ background-color: #333; } #bg-banner .banner-destaque .owl-controls{ position: relative; margin: 25px auto 25px auto; top: 0; right: 0; } } @@media (min-width: 768px){ #bg-banner .banner-destaque article .content-box ul li.small-item{ width: 20%; } #bg-banner .banner-destaque article .content-box ul li.medium-item{ width: 25%; } #bg-banner .banner-destaque article .content-box ul li.big-item{ width: 30%; } } @@media (min-width: 1024px){ #bg-banner .banner-destaque article .content-box ul li{ } #bg-banner .banner-destaque .owl-controls .owl-pagination .owl-page span{ background-color: #FFF; } #bg-banner .banner-destaque .owl-controls .owl-pagination .active span{ background-color: #9C9C9C; } #bg-banner .banner-destaque .owl-controls { position: relative; margin: 0; top: 0; right: 0; } #bg-banner .banner-destaque .owl-controls .owl-pagination { position: absolute; top: -50px; right: 35%; } #bg-banner .banner-destaque .owl-controls .owl-pagination .owl-page span{ margin: 5px; } } </style>
+            <section id="bg-banner" class="grid-12" style="visibility: hidden">
+               <div class="container">
+                  <div class="owl-carousel banner-destaque grid-12">
+                     <div>
+                        <article class="grid-12">
+                           <div class="col-md-8 col-sm-7 col-xs-12 image-banner no-padding-horizontal">
+                              <img srcset="https://vault.imob.online/resized/u4623/buildings/photos/36153/2nUcjASKdqmWRrDSL9lpXzJS-piscinasite2.jpg/wxlarge.jpg 1024w, https://vault.imob.online/resized/u4623/buildings/photos/36153/2nUcjASKdqmWRrDSL9lpXzJS-piscinasite2.jpg/wxlarge.jpg 768w, https://vault.imob.online/resized/u4623/buildings/photos/36153/2nUcjASKdqmWRrDSL9lpXzJS-piscinasite2.jpg/wmedium.jpg 300w" src="../vault.imob.online/resized/u4623/buildings/photos/36153/2nUcjASKdqmWRrDSL9lpXzJS-piscinasite2.jpg/wxlarge.jpg" class="img-responsive" alt="Empreendimento em Jaboatão dos Guararapes, no bairro Piedade">  <i class="ico-video"></i>  
+                              <div class="description">
+                                 <p> <span class="background-theme-color step">Em construção</span> <b><small>A Partir de</small><br>R$ 646.729,46</b> </p>
+                              </div>
+                              <div class="mark"></div>
+                           </div>
+                           <div class="col-md-4 col-sm-5 col-xs-12 content-box no-padding-horizontal">
+                              <h2>
+                                 Empreendimento<br> em <b>Jaboatão dos Guararapes</b><br> 
+                                 <p>Ocean Way</p>
+                              </h2>
+                              <ul>
+                                 <li class="medium-item"><i class="fa fa-bed"></i><br><span>Dorm.</span><br><b>3</b></li>
+                                 <li class="medium-item"><i class="fa fa-bed"></i><br><span>Suítes</span><br><b>3</b></li>
+                                 <li class="medium-item"><i class="fa fa-car"></i><br><span>Vagas</span><br><b>2</b></li>
+                                 <li class="medium-item"><i class="fa fa-arrows-alt"></i><br><span>Área m²</span><br><b>98 a 98</b>
+                                 <li> 
+                              </ul>
+                              <p>Sinta-se convidado a vir conhecer o decorado, por Romero Duarte, do Ocean Way. Aqui seus dias serão INCRÍVEIS e com todo o conforto desejado. Com 3 ...</p>
+                              <a href="#" data-toggle="modal" data-empid="36153" data-target="#modal-more-info-release-BS038" class="background-theme-color hover-background-theme-color btn-show-empmodal"><i class="fa fa-envelope" aria-hidden="true"></i> Contatar</a> <a href="lancamento-7-empreendimento-em-jaboatao-dos-guararapes-bairro-piedade.html#detalhes"><i class="fa fa-reply" aria-hidden="true"></i> Ver Detalhes</a> 
+                           </div>
+                           <a href="lancamento-7-empreendimento-em-jaboatao-dos-guararapes-bairro-piedade.html">Link para mais detalhes sobre o empreendimento</a> 
+                        </article>
+                     </div>
+                     <div>
+                        <article class="grid-12">
+                           <div class="col-md-8 col-sm-7 col-xs-12 image-banner no-padding-horizontal">
+                              <img srcset="https://vault.imob.online/resized/u4623/buildings/photos/37574/YJ6JH9hhR0rVrUfVU384Dt7a-20.jpg/wxlarge.jpg 1024w, https://vault.imob.online/resized/u4623/buildings/photos/37574/YJ6JH9hhR0rVrUfVU384Dt7a-20.jpg/wxlarge.jpg 768w, https://vault.imob.online/resized/u4623/buildings/photos/37574/YJ6JH9hhR0rVrUfVU384Dt7a-20.jpg/wmedium.jpg 300w" src="../vault.imob.online/resized/u4623/buildings/photos/37574/YJ6JH9hhR0rVrUfVU384Dt7a-20.jpg/wxlarge.jpg" class="img-responsive" alt="Empreendimento em Recife, no bairro Cordeiro">  <i class="ico-video"></i>  
+                              <div class="description">
+                                 <p> <span class="background-theme-color step">Em construção</span> <b><small>A Partir de</small><br>R$ 249.999,00</b> </p>
+                              </div>
+                              <div class="mark"></div>
+                           </div>
+                           <div class="col-md-4 col-sm-5 col-xs-12 content-box no-padding-horizontal">
+                              <h2>
+                                 Empreendimento<br> em <b>Recife</b><br> 
+                                 <p>Edifício Alameda dos Nobres</p>
+                              </h2>
+                              <ul>
+                                 <li class="medium-item"><i class="fa fa-bed"></i><br><span>Dorm.</span><br><b>3</b></li>
+                                 <li class="medium-item"><i class="fa fa-bed"></i><br><span>Suítes</span><br><b>2</b></li>
+                                 <li class="medium-item"><i class="fa fa-car"></i><br><span>Vagas</span><br><b>2</b></li>
+                                 <li class="medium-item"><i class="fa fa-arrows-alt"></i><br><span>Área m²</span><br><b>70 a 70</b>
+                                 <li> 
+                              </ul>
+                              <p>Mude para melhor, mude para o ALAMEDA DOS NOBRES, o mais novo empreendimento da LM SARAIVA no Cordeiro. Venha morar com excelência no único 03 (trê...</p>
+                              <a href="#" data-toggle="modal" data-empid="37574" data-target="#modal-more-info-release-BS054" class="background-theme-color hover-background-theme-color btn-show-empmodal"><i class="fa fa-envelope" aria-hidden="true"></i> Contatar</a> <a href="lancamento-17-empreendimento-em-recife-bairro-cordeiro.html#detalhes"><i class="fa fa-reply" aria-hidden="true"></i> Ver Detalhes</a> 
+                           </div>
+                           <a href="lancamento-17-empreendimento-em-recife-bairro-cordeiro.html">Link para mais detalhes sobre o empreendimento</a> 
+                        </article>
+                     </div>
+                     <div>
+                        <article class="grid-12">
+                           <div class="col-md-8 col-sm-7 col-xs-12 image-banner no-padding-horizontal">
+                              <img srcset="https://vault.imob.online/resized/u4623/buildings/photos/41840/WcWLR5qpJFT9VrB2EaVl7T70-banner-show1-1024x512.jpg/wxlarge.jpg 1024w, https://vault.imob.online/resized/u4623/buildings/photos/41840/WcWLR5qpJFT9VrB2EaVl7T70-banner-show1-1024x512.jpg/wxlarge.jpg 768w, https://vault.imob.online/resized/u4623/buildings/photos/41840/WcWLR5qpJFT9VrB2EaVl7T70-banner-show1-1024x512.jpg/wmedium.jpg 300w" src="../vault.imob.online/resized/u4623/buildings/photos/41840/WcWLR5qpJFT9VrB2EaVl7T70-banner-show1-1024x512.jpg/wxlarge.jpg" class="img-responsive" alt="Empreendimento em Jaboatão dos Guararapes, no bairro Candeias">  <i class="ico-video"></i>  
+                              <div class="description">
+                                 <p> <span class="background-theme-color step">Futuro lançamento</span> <b><small>A Partir de</small><br>R$ 135.400,00</b> </p>
+                              </div>
+                              <div class="mark"></div>
+                           </div>
+                           <div class="col-md-4 col-sm-5 col-xs-12 content-box no-padding-horizontal">
+                              <h2>
+                                 Empreendimento<br> em <b>Jaboatão dos Guararapes</b><br> 
+                                 <p>Ecovila Praia</p>
+                              </h2>
+                              <ul>
+                                 <li class="medium-item"><i class="fa fa-bed"></i><br><span>Dorm.</span><br><b>2</b></li>
+                                 <li class="medium-item"><i class="fa fa-bed"></i><br><span>Suítes</span><br><b>---</b></li>
+                                 <li class="medium-item"><i class="fa fa-car"></i><br><span>Vagas</span><br><b>1</b></li>
+                                 <li class="medium-item"><i class="fa fa-arrows-alt"></i><br><span>Área m²</span><br><b>50 a 50</b>
+                                 <li> 
+                              </ul>
+                              <p> </p>
+                              <a href="#" data-toggle="modal" data-empid="41840" data-target="#modal-more-info-release-LNR3" class="background-theme-color hover-background-theme-color btn-show-empmodal"><i class="fa fa-envelope" aria-hidden="true"></i> Contatar</a> <a href="lancamento-21-empreendimento-em-jaboatao-dos-guararapes-bairro-candeias.html#detalhes"><i class="fa fa-reply" aria-hidden="true"></i> Ver Detalhes</a> 
+                           </div>
+                           <a href="lancamento-21-empreendimento-em-jaboatao-dos-guararapes-bairro-candeias.html">Link para mais detalhes sobre o empreendimento</a> 
+                        </article>
+                     </div>
+                     <div>
+                        <article class="grid-12">
+                           <div class="col-md-8 col-sm-7 col-xs-12 image-banner no-padding-horizontal">
+                              <img srcset="https://vault.imob.online/resized/u4623/buildings/photos/37559/23bWQF0QuYIlJLksl83H99aI-externa_mapa_reserva_sao_lourenco_r08.jpg/wxlarge.jpg 1024w, https://vault.imob.online/resized/u4623/buildings/photos/37559/23bWQF0QuYIlJLksl83H99aI-externa_mapa_reserva_sao_lourenco_r08.jpg/wxlarge.jpg 768w, https://vault.imob.online/resized/u4623/buildings/photos/37559/23bWQF0QuYIlJLksl83H99aI-externa_mapa_reserva_sao_lourenco_r08.jpg/wmedium.jpg 300w" src="../vault.imob.online/resized/u4623/buildings/photos/37559/23bWQF0QuYIlJLksl83H99aI-externa_mapa_reserva_sao_lourenco_r08.jpg/wxlarge.jpg" class="img-responsive" alt="Condomínio em São Lourenço da Mata, no bairro Muribara">  <i class="ico-video"></i>  
+                              <div class="description">
+                                 <p> <span class="background-theme-color step">Pronto para morar</span> <b><small>A Partir de</small><br>R$ 120.000,00</b> </p>
+                              </div>
+                              <div class="mark"></div>
+                           </div>
+                           <div class="col-md-4 col-sm-5 col-xs-12 content-box no-padding-horizontal">
+                              <h2>
+                                 Condomínio<br> em <b>São Lourenço da Mata</b><br> 
+                                 <p>Reserva São Lourenço</p>
+                              </h2>
+                              <ul>
+                                 <li class="medium-item"><i class="fa fa-bed"></i><br><span>Dorm.</span><br><b>2</b></li>
+                                 <li class="medium-item"><i class="fa fa-bed"></i><br><span>Suítes</span><br><b>---</b></li>
+                                 <li class="medium-item"><i class="fa fa-car"></i><br><span>Vagas</span><br><b>1</b></li>
+                                 <li class="medium-item"><i class="fa fa-arrows-alt"></i><br><span>Área m²</span><br><b>49 a 50</b>
+                                 <li> 
+                              </ul>
+                              <p>O Reserva São Lourenço é o primeiro empreendimento da marca Pernambuco Construtora Soft e o primeiro bairro planejado de São Lourenço. Participan...</p>
+                              <a href="#" data-toggle="modal" data-empid="37559" data-target="#modal-more-info-release-BS020" class="background-theme-color hover-background-theme-color btn-show-empmodal"><i class="fa fa-envelope" aria-hidden="true"></i> Contatar</a> <a href="condominio-16-em-sao-lourenco-da-mata-bairro-muribara.html#detalhes"><i class="fa fa-reply" aria-hidden="true"></i> Ver Detalhes</a> 
+                           </div>
+                           <a href="condominio-16-em-sao-lourenco-da-mata-bairro-muribara.html">Link para mais detalhes sobre o condomínio</a> 
+                        </article>
+                     </div>
+                     <div>
+                        <article class="grid-12">
+                           <div class="col-md-8 col-sm-7 col-xs-12 image-banner no-padding-horizontal">
+                              <img src="../vault.imob.online/u4623/websites/10408541/banners/16632666/s9oSJSZzRy6dKe5w3dTCQ5Lr-apresentacao-engenho-prince-page10.jpg" class="img-responsive" alt="Foto"> 
+                              <div class="mark"></div>
+                           </div>
+                           <div class="col-md-4 col-sm-5 col-xs-12 content-box no-padding-horizontal">
+                              <h2>Engenho Prince Caxangá</h2>
+                              <p>O Engenho Prince é o mais novo empreendimento da Pernambuco Construtora em Recife. Tudo nele foi pensado para fazer você se sentir em casa. Além de ser perto de tudo, é mais perto ainda da tranqüilidade, da natureza, do canto dos pássaros. Você e sua família vão ter o bem-estar que merecem. Aproveite a oportunidade única de ter um apartamento na Caxangá e sentir-se em casa. Seja bem-vindo!</p>
+                              <a href="https://www.balcaodeservico.com.br/imovel/apartamento-vender-pe-cidade/174/" target="_blank"><i class="fa fa-reply" aria-hidden="true"></i> Ver Detalhes</a>  
+                           </div>
+                           <a href="https://www.balcaodeservico.com.br/imovel/apartamento-vender-pe-cidade/174/" target="_blank"></a>  
+                        </article>
+                     </div>
+                     <div>
+                        <article class="grid-12">
+                           <div class="col-md-8 col-sm-7 col-xs-12 image-banner no-padding-horizontal">
+                              <img srcset="https://vault.imob.online/resized/u4623/properties/photos/15836157/t2EBP48DHbDcRmkqTaoRX9tV-7.jpg/wxlarge.jpg 1024w, https://vault.imob.online/resized/u4623/properties/photos/15836157/t2EBP48DHbDcRmkqTaoRX9tV-7.jpg/wxlarge.jpg 768w, https://vault.imob.online/resized/u4623/properties/photos/15836157/t2EBP48DHbDcRmkqTaoRX9tV-7.jpg/wmedium.jpg 300w" src="../vault.imob.online/resized/u4623/properties/photos/15836157/t2EBP48DHbDcRmkqTaoRX9tV-7.jpg/wxlarge.jpg" class="img-responsive" alt="Apartamento em Recife, bairro Boa Viagem">  
+                              <div class="description">
+                                 <p><span class="background-theme-color" >Em construção</span></p>
+                                 <p class=""> <span class="background-theme-color">Venda</span><b>R$ 1.029.000,00</b> </p>
+                                 <p class="inactive"> <span class="background-theme-color">Aluguel</span><b>-----</b> </p>
+                                 <p class="inactive"> <span class="background-theme-color">Temporada</span><b>-----</b> </p>
+                                 <p class="inactive"> <span class="background-theme-color">Arrendamento</span><b>-----</b> </p>
+                              </div>
+                              <div class="mark"></div>
+                           </div>
+                           <div class="col-md-4 col-sm-5 col-xs-12 content-box no-padding-horizontal">
+                              <h2> Apartamento para <b>Venda</b><br> em <b>Recife</b> <span><i class="fa fa-map-marker" aria-hidden="true"></i> Boa Viagem</span> </h2>
+                              <ul>
+                                 <li class="small-item"><i class="fa fa-bed"></i><br><span>Dorm.</span><br><b>4</b></li>
+                                 <li class="small-item"><i class="fa fa-bed"></i><br><span>Suítes</span><br><b>4</b></li>
+                                 <li class="small-item"><i class="fa fa-car"></i><br><span>Vagas</span><br><b>2</b></li>
+                                 <li class="small-item"><i class="fa fa-tint"></i><br><span>Banheiros</span><br><b>4</b></li>
+                                 <li class="small-item"><i class="fa fa-arrows-alt"></i><br><span>Área m²</span><br><b>185</b></li>
+                              </ul>
+                              <p>Venha morar em um dos bairros mais nobre da cidade do Recife, Boa Viagem. O Jardim das tulipas está próximo a tudo que você precisa para ter uma ex...</p>
+                              <a href="javascript:void(0)" data-toggle="modal" data-propertyid='15836157' data-property='{"CodigoImovel":"ANC-16","linkPagina":"\/35-apartamento-em-recife-bairro-boa-viagem.html","infoEmp":"","id":15836157,"TxtMsgMaisInfo":"Ol\u00e1, gostaria de saber mais informa\u00e7\u00f5es sobre o im\u00f3vel: Apartamento, Venda em Recife no bairro Boa Viagem valor: R$ 1.029.000,00 Ref. ANC-16. Aguardo o contato. Obrigado"}' class="background-theme-color hover-background-theme-color btn-show-propertymodal"><i class="fa fa-envelope" aria-hidden="true"></i> Contatar</a> <a href="35-apartamento-em-recife-bairro-boa-viagem.html#detalhes"><i class="fa fa-reply" aria-hidden="true"></i> Ver Detalhes</a> 
+                           </div>
+                           <a href="35-apartamento-em-recife-bairro-boa-viagem.html">Link para mais detalhes sobre o imóvel</a> 
+                        </article>
+                     </div>
+                     <div>
+                        <article class="grid-12">
+                           <div class="col-md-8 col-sm-7 col-xs-12 image-banner no-padding-horizontal">
+                              <img srcset="https://vault.imob.online/resized/u4623/properties/photos/15824977/OzmdAlJbeR1tqf7LdVfe8UqA-1.jpg/wxlarge.jpg 1024w, https://vault.imob.online/resized/u4623/properties/photos/15824977/OzmdAlJbeR1tqf7LdVfe8UqA-1.jpg/wxlarge.jpg 768w, https://vault.imob.online/resized/u4623/properties/photos/15824977/OzmdAlJbeR1tqf7LdVfe8UqA-1.jpg/wmedium.jpg 300w" src="../vault.imob.online/resized/u4623/properties/photos/15824977/OzmdAlJbeR1tqf7LdVfe8UqA-1.jpg/wxlarge.jpg" class="img-responsive" alt="Casa em Igarassu, bairro Saramandaia">  
+                              <div class="description">
+                                 <p><span class="background-theme-color" >Usado</span></p>
+                                 <p class=""> <span class="background-theme-color">Venda</span><b>R$ 550.000,00</b> </p>
+                                 <p class="inactive"> <span class="background-theme-color">Aluguel</span><b>-----</b> </p>
+                                 <p class="inactive"> <span class="background-theme-color">Temporada</span><b>-----</b> </p>
+                                 <p class="inactive"> <span class="background-theme-color">Arrendamento</span><b>-----</b> </p>
+                              </div>
+                              <div class="mark"></div>
+                           </div>
+                           <div class="col-md-4 col-sm-5 col-xs-12 content-box no-padding-horizontal">
+                              <h2> Casa para <b>Venda</b><br> em <b>Igarassu</b> <span><i class="fa fa-map-marker" aria-hidden="true"></i> Saramandaia</span> </h2>
+                              <ul>
+                                 <li class="small-item"><i class="fa fa-bed"></i><br><span>Dorm.</span><br><b>4</b></li>
+                                 <li class="small-item"><i class="fa fa-bed"></i><br><span>Suítes</span><br><b>1</b></li>
+                                 <li class="small-item"><i class="fa fa-car"></i><br><span>Vagas</span><br><b>3</b></li>
+                                 <li class="small-item"><i class="fa fa-tint"></i><br><span>Banheiros</span><br><b>2</b></li>
+                                 <li class="small-item"><i class="fa fa-arrows-alt"></i><br><span>Área m²</span><br><b>280</b></li>
+                              </ul>
+                              <p>Apresentação Localizado em Vila Saramandaia, um dos bairros mais procurados por quem busca um imóvel em Igarassu, A casa fica perto de tudo, permit...</p>
+                              <a href="javascript:void(0)" data-toggle="modal" data-propertyid='15824977' data-property='{"CodigoImovel":"BS041","linkPagina":"\/31-casa-em-igarassu-bairro-saramandaia.html","infoEmp":"","id":15824977,"TxtMsgMaisInfo":"Ol\u00e1, gostaria de saber mais informa\u00e7\u00f5es sobre o im\u00f3vel: Casa, Venda em Igarassu no bairro Saramandaia valor: R$ 550.000,00 Ref. BS041. Aguardo o contato. Obrigado"}' class="background-theme-color hover-background-theme-color btn-show-propertymodal"><i class="fa fa-envelope" aria-hidden="true"></i> Contatar</a> <a href="31-casa-em-igarassu-bairro-saramandaia.html#detalhes"><i class="fa fa-reply" aria-hidden="true"></i> Ver Detalhes</a> 
+                           </div>
+                           <a href="31-casa-em-igarassu-bairro-saramandaia.html">Link para mais detalhes sobre o imóvel</a> 
+                        </article>
+                     </div>
+                     <div>
+                        <article class="grid-12">
+                           <div class="col-md-8 col-sm-7 col-xs-12 image-banner no-padding-horizontal">
+                              <img srcset="https://vault.imob.online/resized/u4623/properties/photos/15844466/aVyQmTxQVJXymt2umPHuAtTl-20180227_124630-02.jpg/wxlarge.jpg 1024w, https://vault.imob.online/resized/u4623/properties/photos/15844466/aVyQmTxQVJXymt2umPHuAtTl-20180227_124630-02.jpg/wxlarge.jpg 768w, https://vault.imob.online/resized/u4623/properties/photos/15844466/aVyQmTxQVJXymt2umPHuAtTl-20180227_124630-02.jpg/wmedium.jpg 300w" src="../vault.imob.online/resized/u4623/properties/photos/15844466/aVyQmTxQVJXymt2umPHuAtTl-20180227_124630-02.jpg/wxlarge.jpg" class="img-responsive" alt="Apartamento em São Lourenço da Mata, bairro Muribara">  <i class="ico-video"></i>  
+                              <div class="description">
+                                 <p><span class="background-theme-color" >Usado</span></p>
+                                 <p class=""> <span class="background-theme-color">Venda</span><b>R$ 120.000,00</b> </p>
+                                 <p class="inactive"> <span class="background-theme-color">Aluguel</span><b>-----</b> </p>
+                                 <p class="inactive"> <span class="background-theme-color">Temporada</span><b>-----</b> </p>
+                                 <p class="inactive"> <span class="background-theme-color">Arrendamento</span><b>-----</b> </p>
+                              </div>
+                              <div class="mark"></div>
+                           </div>
+                           <div class="col-md-4 col-sm-5 col-xs-12 content-box no-padding-horizontal">
+                              <h2> Apartamento para <b>Venda</b><br> em <b>São Lourenço da Mata</b> <span><i class="fa fa-map-marker" aria-hidden="true"></i> Muribara</span> </h2>
+                              <ul>
+                                 <li class="small-item"><i class="fa fa-bed"></i><br><span>Dorm.</span><br><b>2</b></li>
+                                 <li class="small-item"><i class="fa fa-bed"></i><br><span>Suítes</span><br><b>---</b></li>
+                                 <li class="small-item"><i class="fa fa-car"></i><br><span>Vagas</span><br><b>1</b></li>
+                                 <li class="small-item"><i class="fa fa-tint"></i><br><span>Banheiros</span><br><b>1</b></li>
+                                 <li class="small-item"><i class="fa fa-arrows-alt"></i><br><span>Área hec</span><br><b>49.12</b></li>
+                              </ul>
+                              <p>IMPOSSÍVEL?, NÃO! Minha Casa Minha Vida. Apartamento com parcela reduzida com documentação inclusa ITBI, RGI E TAXA CAIXA. Sua última oportunidad...</p>
+                              <a href="javascript:void(0)" data-toggle="modal" data-propertyid='15844466' data-property='{"CodigoImovel":"LNR2","linkPagina":"\/43-apartamento-em-sao-lourenco-da-mata-bairro-muribara.html","infoEmp":"","id":15844466,"TxtMsgMaisInfo":"Ol\u00e1, gostaria de saber mais informa\u00e7\u00f5es sobre o im\u00f3vel: Apartamento, Venda em S\u00e3o Louren\u00e7o da Mata no bairro Muribara valor: R$ 120.000,00 Ref. LNR2. Aguardo o contato. Obrigado"}' class="background-theme-color hover-background-theme-color btn-show-propertymodal"><i class="fa fa-envelope" aria-hidden="true"></i> Contatar</a> <a href="43-apartamento-em-sao-lourenco-da-mata-bairro-muribara.html#detalhes"><i class="fa fa-reply" aria-hidden="true"></i> Ver Detalhes</a> 
+                           </div>
+                           <a href="43-apartamento-em-sao-lourenco-da-mata-bairro-muribara.html">Link para mais detalhes sobre o imóvel</a> 
+                        </article>
+                     </div>
+                     <div>
+                        <article class="grid-12">
+                           <div class="col-md-8 col-sm-7 col-xs-12 image-banner no-padding-horizontal">
+                              <img srcset="https://vault.imob.online/resized/u4623/properties/photos/15755481/F0R9prMwJea8VOCOJX5Hb5zR-conj-residencial-regiao-metropolitana-001.jpg/wxlarge.jpg 1024w, https://vault.imob.online/resized/u4623/properties/photos/15755481/F0R9prMwJea8VOCOJX5Hb5zR-conj-residencial-regiao-metropolitana-001.jpg/wxlarge.jpg 768w, https://vault.imob.online/resized/u4623/properties/photos/15755481/F0R9prMwJea8VOCOJX5Hb5zR-conj-residencial-regiao-metropolitana-001.jpg/wmedium.jpg 300w" src="../vault.imob.online/resized/u4623/properties/photos/15755481/F0R9prMwJea8VOCOJX5Hb5zR-conj-residencial-regiao-metropolitana-001.jpg/wxlarge.jpg" class="img-responsive" alt="Apartamento em Camaragibe, bairro Nazaré">  
+                              <div class="description">
+                                 <p><span class="background-theme-color" >Usado</span></p>
+                                 <p class=""> <span class="background-theme-color">Venda</span><b>R$ 116.000,00</b> </p>
+                                 <p class="inactive"> <span class="background-theme-color">Aluguel</span><b>-----</b> </p>
+                                 <p class="inactive"> <span class="background-theme-color">Temporada</span><b>-----</b> </p>
+                                 <p class="inactive"> <span class="background-theme-color">Arrendamento</span><b>-----</b> </p>
+                              </div>
+                              <div class="mark"></div>
+                           </div>
+                           <div class="col-md-4 col-sm-5 col-xs-12 content-box no-padding-horizontal">
+                              <h2> Apartamento para <b>Venda</b><br> em <b>Camaragibe</b> <span><i class="fa fa-map-marker" aria-hidden="true"></i> Nazaré</span> </h2>
+                              <ul>
+                                 <li class="small-item"><i class="fa fa-bed"></i><br><span>Dorm.</span><br><b>2</b></li>
+                                 <li class="small-item"><i class="fa fa-bed"></i><br><span>Suítes</span><br><b>---</b></li>
+                                 <li class="small-item"><i class="fa fa-car"></i><br><span>Vagas</span><br><b>1</b></li>
+                                 <li class="small-item"><i class="fa fa-tint"></i><br><span>Banheiros</span><br><b>1</b></li>
+                                 <li class="small-item"><i class="fa fa-arrows-alt"></i><br><span>Área m²</span><br><b>46</b></li>
+                              </ul>
+                              <p>Apresentação:
+                                 Localizado em Camaragibe, um dos bairros mais procurados por quem busca um imóvel no Recife, O Região Metropolitana fica perto de tu...
+                              </p>
+                              <a href="javascript:void(0)" data-toggle="modal" data-propertyid='15755481' data-property='{"CodigoImovel":"BS027","linkPagina":"\/1-apartamento-em-camaragibe-bairro-nazare.html","infoEmp":"","id":15755481,"TxtMsgMaisInfo":"Ol\u00e1, gostaria de saber mais informa\u00e7\u00f5es sobre o im\u00f3vel: Apartamento, Venda em Camaragibe no bairro Nazar\u00e9 valor: R$ 116.000,00 Ref. BS027. Aguardo o contato. Obrigado"}' class="background-theme-color hover-background-theme-color btn-show-propertymodal"><i class="fa fa-envelope" aria-hidden="true"></i> Contatar</a> <a href="1-apartamento-em-camaragibe-bairro-nazare.html#detalhes"><i class="fa fa-reply" aria-hidden="true"></i> Ver Detalhes</a> 
+                           </div>
+                           <a href="1-apartamento-em-camaragibe-bairro-nazare.html">Link para mais detalhes sobre o imóvel</a> 
+                        </article>
+                     </div>
+                     <div>
+                        <article class="grid-12">
+                           <div class="col-md-8 col-sm-7 col-xs-12 image-banner no-padding-horizontal">
+                              <img srcset="https://vault.imob.online/resized/u4623/properties/photos/15822894/KUQpIK8823gH6bimLyXXGHfG-1.jpg/wxlarge.jpg 1024w, https://vault.imob.online/resized/u4623/properties/photos/15822894/KUQpIK8823gH6bimLyXXGHfG-1.jpg/wxlarge.jpg 768w, https://vault.imob.online/resized/u4623/properties/photos/15822894/KUQpIK8823gH6bimLyXXGHfG-1.jpg/wmedium.jpg 300w" src="../vault.imob.online/resized/u4623/properties/photos/15822894/KUQpIK8823gH6bimLyXXGHfG-1.jpg/wxlarge.jpg" class="img-responsive" alt="Apartamento em São Lourenço da Mata, bairro Muribara">  <i class="ico-video"></i>  
+                              <div class="description">
+                                 <p><span class="background-theme-color" >Pronto para morar</span></p>
+                                 <p class=""> <span class="background-theme-color">Venda</span><b>R$ 123.000,00</b> </p>
+                                 <p class="inactive"> <span class="background-theme-color">Aluguel</span><b>-----</b> </p>
+                                 <p class="inactive"> <span class="background-theme-color">Temporada</span><b>-----</b> </p>
+                                 <p class="inactive"> <span class="background-theme-color">Arrendamento</span><b>-----</b> </p>
+                              </div>
+                              <div class="mark"></div>
+                           </div>
+                           <div class="col-md-4 col-sm-5 col-xs-12 content-box no-padding-horizontal">
+                              <h2> Apartamento para <b>Venda</b><br> em <b>São Lourenço da Mata</b> <span><i class="fa fa-map-marker" aria-hidden="true"></i> Muribara</span> </h2>
+                              <ul>
+                                 <li class="small-item"><i class="fa fa-bed"></i><br><span>Dorm.</span><br><b>2</b></li>
+                                 <li class="small-item"><i class="fa fa-bed"></i><br><span>Suítes</span><br><b>---</b></li>
+                                 <li class="small-item"><i class="fa fa-car"></i><br><span>Vagas</span><br><b>1</b></li>
+                                 <li class="small-item"><i class="fa fa-tint"></i><br><span>Banheiros</span><br><b>1</b></li>
+                                 <li class="small-item"><i class="fa fa-arrows-alt"></i><br><span>Área m²</span><br><b>49</b></li>
+                              </ul>
+                              <p>Apresentação
+                                 O Reserva São Lourenço é o primeiro empreendimento da marca Pernambuco Construtora Soft e o primeiro bairro planejado de São Louren...
+                              </p>
+                              <a href="javascript:void(0)" data-toggle="modal" data-propertyid='15822894' data-property='{"CodigoImovel":"BS020","linkPagina":"\/25-apartamento-em-sao-lourenco-da-mata-bairro-muribara.html","infoEmp":"","id":15822894,"TxtMsgMaisInfo":"Ol\u00e1, gostaria de saber mais informa\u00e7\u00f5es sobre o im\u00f3vel: Apartamento, Venda em S\u00e3o Louren\u00e7o da Mata no bairro Muribara valor: R$ 123.000,00 Ref. BS020. Aguardo o contato. Obrigado"}' class="background-theme-color hover-background-theme-color btn-show-propertymodal"><i class="fa fa-envelope" aria-hidden="true"></i> Contatar</a> <a href="25-apartamento-em-sao-lourenco-da-mata-bairro-muribara.html#detalhes"><i class="fa fa-reply" aria-hidden="true"></i> Ver Detalhes</a> 
+                           </div>
+                           <a href="25-apartamento-em-sao-lourenco-da-mata-bairro-muribara.html">Link para mais detalhes sobre o imóvel</a> 
+                        </article>
+                     </div>
+                  </div>
+                  <div class="modal fade" id="modal-more-info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <div class="modal-header"> <button type="button" class="close hidden-xs" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <b class="modal-title" id="myModalLabel">Eu quero mais informações</b> </div>
+                           <div class="modal-body">
+                              <form action="https://www.imobileonline.com.br/mais-informacoes.html" id="FrmMaisInfoModal" method="post" class="form clearfix">
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <input type="text" name="NomeContato" placeholder="Nome" class="form-control" required>
+                                 </label>
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <input type="email" name="EmailContato" placeholder="E-mail" class="form-control" required>
+                                 </label>
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <input type="text" name="FoneContato" placeholder="Telefone" class="form-control telephoneMask"
+                                    required>
+                                 </label>
+                                 <div class="grid-12">
+                                    <p>Receba contato por:</p>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoWhatsapp" value="true">
+                                       <i class="fa fa-whatsapp" aria-hidden="true"></i> Whatsapp
+                                       </label>
+                                    </div>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoPhone" value="true">
+                                       <i class="fa fa-phone" aria-hidden="true"></i> Telefone
+                                       </label>
+                                    </div>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoMail" value="true">
+                                       <i class="fa fa-envelope" aria-hidden="true"></i> E-mail
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <textarea name="TxtMsgMaisInfo" id="TxtMsgMaisInfo" class="form-control" cols="36"
+                                    rows="3"></textarea>
+                                 </label>
+                                 <input type="hidden" name="CodigoImovel" id="CodigoImovel" value="">
+                                 <input type="hidden" name="pagina" id="pagina" value="">
+                                 <input type="hidden" name="linkPagina" id="linkPagina" value="">
+                                 <input type="hidden" name="tipo" id="tipo" value="imovel">
+                                 <input type="hidden" name="pageNumber" id="pageNumber" value="">
+                                 <input type="hidden" name="infoEmp" id="infoEmp" value="">
+                                 <input type="hidden" id="_nome_" name="_nome_" value="">
+                                 <input type="text" id="_email_" name="_email_" class="hidden" value="">
+                                 <div class="row">
+                                    <div class="col-xs-12" style="margin-bottom:15px;margin-left: 13px">
+                                       <div class="g-recaptcha" data-sitekey="6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"></div>
+                                       <noscript>
+                                          <div>
+                                             <div style="width: 302px; height: 422px; position: relative;">
+                                                <div style="width: 302px; height: 422px; position: absolute;">
+                                                   <iframe src="https://www.google.com/recaptcha/api/fallback?k=6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"
+                                                      frameborder="0" scrolling="no"
+                                                      style="width: 302px; height:422px; border-style: none;">
+                                                   </iframe>
+                                                </div>
+                                             </div>
+                                             <div style="width: 300px; height: 60px; border-style: none;
+                                                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                                                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                                                <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                                   class="g-recaptcha-response"
+                                                   style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                                                   margin: 10px 25px; padding: 0px; resize: none;">
+                                                </textarea>
+                                             </div>
+                                          </div>
+                                       </noscript>
+                                    </div>
+                                 </div>
+                                 <input type="submit" class="background-theme-color hover-background-theme-color btn-track"
+                                    value="Eu quero mais informações">
+                                 <a class="close btn visible-xs" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"
+                                    aria-hidden="true"></i>
+                                 Fechar</a>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="modal fade" id="modal-more-info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <div class="modal-header"> <button type="button" class="close hidden-xs" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <b class="modal-title" id="myModalLabel">Eu quero mais informações</b> </div>
+                           <div class="modal-body">
+                              <form action="https://www.imobileonline.com.br/mais-informacoes.html" id="FrmMaisInfoModal" method="post" class="form clearfix">
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <input type="text" name="NomeContato" placeholder="Nome" class="form-control" required>
+                                 </label>
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <input type="email" name="EmailContato" placeholder="E-mail" class="form-control" required>
+                                 </label>
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <input type="text" name="FoneContato" placeholder="Telefone" class="form-control telephoneMask"
+                                    required>
+                                 </label>
+                                 <div class="grid-12">
+                                    <p>Receba contato por:</p>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoWhatsapp" value="true">
+                                       <i class="fa fa-whatsapp" aria-hidden="true"></i> Whatsapp
+                                       </label>
+                                    </div>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoPhone" value="true">
+                                       <i class="fa fa-phone" aria-hidden="true"></i> Telefone
+                                       </label>
+                                    </div>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoMail" value="true">
+                                       <i class="fa fa-envelope" aria-hidden="true"></i> E-mail
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <textarea name="TxtMsgMaisInfo" id="TxtMsgMaisInfo" class="form-control" cols="36"
+                                    rows="3"></textarea>
+                                 </label>
+                                 <input type="hidden" name="CodigoImovel" id="CodigoImovel" value="">
+                                 <input type="hidden" name="pagina" id="pagina" value="">
+                                 <input type="hidden" name="linkPagina" id="linkPagina" value="">
+                                 <input type="hidden" name="tipo" id="tipo" value="imovel">
+                                 <input type="hidden" name="pageNumber" id="pageNumber" value="">
+                                 <input type="hidden" name="infoEmp" id="infoEmp" value="">
+                                 <input type="hidden" id="_nome_" name="_nome_" value="">
+                                 <input type="text" id="_email_" name="_email_" class="hidden" value="">
+                                 <div class="row">
+                                    <div class="col-xs-12" style="margin-bottom:15px;margin-left: 13px">
+                                       <div class="g-recaptcha" data-sitekey="6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"></div>
+                                       <noscript>
+                                          <div>
+                                             <div style="width: 302px; height: 422px; position: relative;">
+                                                <div style="width: 302px; height: 422px; position: absolute;">
+                                                   <iframe src="https://www.google.com/recaptcha/api/fallback?k=6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"
+                                                      frameborder="0" scrolling="no"
+                                                      style="width: 302px; height:422px; border-style: none;">
+                                                   </iframe>
+                                                </div>
+                                             </div>
+                                             <div style="width: 300px; height: 60px; border-style: none;
+                                                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                                                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                                                <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                                   class="g-recaptcha-response"
+                                                   style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                                                   margin: 10px 25px; padding: 0px; resize: none;">
+                                                </textarea>
+                                             </div>
+                                          </div>
+                                       </noscript>
+                                    </div>
+                                 </div>
+                                 <input type="submit" class="background-theme-color hover-background-theme-color btn-track"
+                                    value="Eu quero mais informações">
+                                 <a class="close btn visible-xs" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"
+                                    aria-hidden="true"></i>
+                                 Fechar</a>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="modal fade" id="modal-more-info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <div class="modal-header"> <button type="button" class="close hidden-xs" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <b class="modal-title" id="myModalLabel">Eu quero mais informações</b> </div>
+                           <div class="modal-body">
+                              <form action="https://www.imobileonline.com.br/mais-informacoes.html" id="FrmMaisInfoModal" method="post" class="form clearfix">
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <input type="text" name="NomeContato" placeholder="Nome" class="form-control" required>
+                                 </label>
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <input type="email" name="EmailContato" placeholder="E-mail" class="form-control" required>
+                                 </label>
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <input type="text" name="FoneContato" placeholder="Telefone" class="form-control telephoneMask"
+                                    required>
+                                 </label>
+                                 <div class="grid-12">
+                                    <p>Receba contato por:</p>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoWhatsapp" value="true">
+                                       <i class="fa fa-whatsapp" aria-hidden="true"></i> Whatsapp
+                                       </label>
+                                    </div>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoPhone" value="true">
+                                       <i class="fa fa-phone" aria-hidden="true"></i> Telefone
+                                       </label>
+                                    </div>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoMail" value="true">
+                                       <i class="fa fa-envelope" aria-hidden="true"></i> E-mail
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <textarea name="TxtMsgMaisInfo" id="TxtMsgMaisInfo" class="form-control" cols="36"
+                                    rows="3"></textarea>
+                                 </label>
+                                 <input type="hidden" name="CodigoImovel" id="CodigoImovel" value="">
+                                 <input type="hidden" name="pagina" id="pagina" value="">
+                                 <input type="hidden" name="linkPagina" id="linkPagina" value="">
+                                 <input type="hidden" name="tipo" id="tipo" value="imovel">
+                                 <input type="hidden" name="pageNumber" id="pageNumber" value="">
+                                 <input type="hidden" name="infoEmp" id="infoEmp" value="">
+                                 <input type="hidden" id="_nome_" name="_nome_" value="">
+                                 <input type="text" id="_email_" name="_email_" class="hidden" value="">
+                                 <div class="row">
+                                    <div class="col-xs-12" style="margin-bottom:15px;margin-left: 13px">
+                                       <div class="g-recaptcha" data-sitekey="6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"></div>
+                                       <noscript>
+                                          <div>
+                                             <div style="width: 302px; height: 422px; position: relative;">
+                                                <div style="width: 302px; height: 422px; position: absolute;">
+                                                   <iframe src="https://www.google.com/recaptcha/api/fallback?k=6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"
+                                                      frameborder="0" scrolling="no"
+                                                      style="width: 302px; height:422px; border-style: none;">
+                                                   </iframe>
+                                                </div>
+                                             </div>
+                                             <div style="width: 300px; height: 60px; border-style: none;
+                                                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                                                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                                                <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                                   class="g-recaptcha-response"
+                                                   style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                                                   margin: 10px 25px; padding: 0px; resize: none;">
+                                                </textarea>
+                                             </div>
+                                          </div>
+                                       </noscript>
+                                    </div>
+                                 </div>
+                                 <input type="submit" class="background-theme-color hover-background-theme-color btn-track"
+                                    value="Eu quero mais informações">
+                                 <a class="close btn visible-xs" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"
+                                    aria-hidden="true"></i>
+                                 Fechar</a>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="modal fade" id="modal-more-info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <div class="modal-header"> <button type="button" class="close hidden-xs" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <b class="modal-title" id="myModalLabel">Eu quero mais informações</b> </div>
+                           <div class="modal-body">
+                              <form action="https://www.imobileonline.com.br/mais-informacoes.html" id="FrmMaisInfoModal" method="post" class="form clearfix">
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <input type="text" name="NomeContato" placeholder="Nome" class="form-control" required>
+                                 </label>
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <input type="email" name="EmailContato" placeholder="E-mail" class="form-control" required>
+                                 </label>
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <input type="text" name="FoneContato" placeholder="Telefone" class="form-control telephoneMask"
+                                    required>
+                                 </label>
+                                 <div class="grid-12">
+                                    <p>Receba contato por:</p>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoWhatsapp" value="true">
+                                       <i class="fa fa-whatsapp" aria-hidden="true"></i> Whatsapp
+                                       </label>
+                                    </div>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoPhone" value="true">
+                                       <i class="fa fa-phone" aria-hidden="true"></i> Telefone
+                                       </label>
+                                    </div>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoMail" value="true">
+                                       <i class="fa fa-envelope" aria-hidden="true"></i> E-mail
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <textarea name="TxtMsgMaisInfo" id="TxtMsgMaisInfo" class="form-control" cols="36"
+                                    rows="3"></textarea>
+                                 </label>
+                                 <input type="hidden" name="CodigoImovel" id="CodigoImovel" value="">
+                                 <input type="hidden" name="pagina" id="pagina" value="">
+                                 <input type="hidden" name="linkPagina" id="linkPagina" value="">
+                                 <input type="hidden" name="tipo" id="tipo" value="imovel">
+                                 <input type="hidden" name="pageNumber" id="pageNumber" value="">
+                                 <input type="hidden" name="infoEmp" id="infoEmp" value="">
+                                 <input type="hidden" id="_nome_" name="_nome_" value="">
+                                 <input type="text" id="_email_" name="_email_" class="hidden" value="">
+                                 <div class="row">
+                                    <div class="col-xs-12" style="margin-bottom:15px;margin-left: 13px">
+                                       <div class="g-recaptcha" data-sitekey="6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"></div>
+                                       <noscript>
+                                          <div>
+                                             <div style="width: 302px; height: 422px; position: relative;">
+                                                <div style="width: 302px; height: 422px; position: absolute;">
+                                                   <iframe src="https://www.google.com/recaptcha/api/fallback?k=6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"
+                                                      frameborder="0" scrolling="no"
+                                                      style="width: 302px; height:422px; border-style: none;">
+                                                   </iframe>
+                                                </div>
+                                             </div>
+                                             <div style="width: 300px; height: 60px; border-style: none;
+                                                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                                                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                                                <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                                   class="g-recaptcha-response"
+                                                   style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                                                   margin: 10px 25px; padding: 0px; resize: none;">
+                                                </textarea>
+                                             </div>
+                                          </div>
+                                       </noscript>
+                                    </div>
+                                 </div>
+                                 <input type="submit" class="background-theme-color hover-background-theme-color btn-track"
+                                    value="Eu quero mais informações">
+                                 <a class="close btn visible-xs" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"
+                                    aria-hidden="true"></i>
+                                 Fechar</a>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="modal fade" id="modal-more-info" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <div class="modal-header"> <button type="button" class="close hidden-xs" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <b class="modal-title" id="myModalLabel">Eu quero mais informações</b> </div>
+                           <div class="modal-body">
+                              <form action="https://www.imobileonline.com.br/mais-informacoes.html" id="FrmMaisInfoModal" method="post" class="form clearfix">
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <input type="text" name="NomeContato" placeholder="Nome" class="form-control" required>
+                                 </label>
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <input type="email" name="EmailContato" placeholder="E-mail" class="form-control" required>
+                                 </label>
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <input type="text" name="FoneContato" placeholder="Telefone" class="form-control telephoneMask"
+                                    required>
+                                 </label>
+                                 <div class="grid-12">
+                                    <p>Receba contato por:</p>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoWhatsapp" value="true">
+                                       <i class="fa fa-whatsapp" aria-hidden="true"></i> Whatsapp
+                                       </label>
+                                    </div>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoPhone" value="true">
+                                       <i class="fa fa-phone" aria-hidden="true"></i> Telefone
+                                       </label>
+                                    </div>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoMail" value="true">
+                                       <i class="fa fa-envelope" aria-hidden="true"></i> E-mail
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <textarea name="TxtMsgMaisInfo" id="TxtMsgMaisInfo" class="form-control" cols="36"
+                                    rows="3"></textarea>
+                                 </label>
+                                 <input type="hidden" name="CodigoImovel" id="CodigoImovel" value="">
+                                 <input type="hidden" name="pagina" id="pagina" value="">
+                                 <input type="hidden" name="linkPagina" id="linkPagina" value="">
+                                 <input type="hidden" name="tipo" id="tipo" value="imovel">
+                                 <input type="hidden" name="pageNumber" id="pageNumber" value="">
+                                 <input type="hidden" name="infoEmp" id="infoEmp" value="">
+                                 <input type="hidden" id="_nome_" name="_nome_" value="">
+                                 <input type="text" id="_email_" name="_email_" class="hidden" value="">
+                                 <div class="row">
+                                    <div class="col-xs-12" style="margin-bottom:15px;margin-left: 13px">
+                                       <div class="g-recaptcha" data-sitekey="6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"></div>
+                                       <noscript>
+                                          <div>
+                                             <div style="width: 302px; height: 422px; position: relative;">
+                                                <div style="width: 302px; height: 422px; position: absolute;">
+                                                   <iframe src="https://www.google.com/recaptcha/api/fallback?k=6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"
+                                                      frameborder="0" scrolling="no"
+                                                      style="width: 302px; height:422px; border-style: none;">
+                                                   </iframe>
+                                                </div>
+                                             </div>
+                                             <div style="width: 300px; height: 60px; border-style: none;
+                                                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                                                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                                                <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                                   class="g-recaptcha-response"
+                                                   style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                                                   margin: 10px 25px; padding: 0px; resize: none;">
+                                                </textarea>
+                                             </div>
+                                          </div>
+                                       </noscript>
+                                    </div>
+                                 </div>
+                                 <input type="submit" class="background-theme-color hover-background-theme-color btn-track"
+                                    value="Eu quero mais informações">
+                                 <a class="close btn visible-xs" data-dismiss="modal" aria-label="Close"><i class="fa fa-times"
+                                    aria-hidden="true"></i>
+                                 Fechar</a>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="modal fade" id="modal-more-info-release-BS038" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <div class="modal-header"> <button type="button" class="close hidden-xs" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <b class="modal-title" id="myModalLabel">Eu quero mais informações</b> </div>
+                           <div class="modal-body">
+                              <form action="https://www.imobileonline.com.br/mais-informacoes-lancamento.html" id="FrmMaisInfoReleaseModal-BS038" class="form clearfix">
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <input type="text" name="NomeContato" placeholder="Nome" class="form-control" required>
+                                 </label>
+                                 <label class="label-asses">
+                                 <span>Email</span>
+                                 <input type="email" name="EmailContato" placeholder="E-mail" class="form-control" required>
+                                 </label>
+                                 <label class="label-asses">
+                                 <span>Telefone</span>
+                                 <input type="text" name="FoneContato" placeholder="Telefone" class="form-control telephoneMask" required>
+                                 </label>
+                                 <div class="grid-12">
+                                    <p>Receba contato por:</p>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoWhatsapp" value="true">
+                                       <i class="fa fa-whatsapp" aria-hidden="true"></i> Whatsapp
+                                       </label>
+                                    </div>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoPhone" value="true">
+                                       <i class="fa fa-phone" aria-hidden="true"></i> Telefone
+                                       </label>
+                                    </div>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoMail" value="true">
+                                       <i class="fa fa-envelope" aria-hidden="true"></i> E-mail
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <label class="label-asses">
+                                 <span>Descrição</span>
+                                 <textarea name="TxtMsgMaisInfo" class="form-control" cols="36" rows="3">Olá, gostaria de saber mais informações sobre o empreendimento em Jaboatão dos Guararapes no bairro Piedade a partir de: R$ 646.729,46 Ref. BS038. Aguardo o contato. Obrigado</textarea> </label> <input type="hidden" name="CodigoImovel" value="BS038"> <input type="hidden" name="pagina" value="home"> <input type="hidden" name="linkPagina" value=""> <input type="hidden" name="tipo" value="empreendimento"> <input type="hidden" name="empName" value="Ocean Way">
+                                 <input type="hidden" id="_nome_" name="_nome_" value="">
+                                 <input type="text" id="_email_" name="_email_" class="hidden" value="">
+                                 <div class="row">
+                                    <div class="col-xs-12" style="margin-bottom:15px;margin-left: 13px">
+                                       <div class="g-recaptcha" data-sitekey="6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"></div>
+                                       <noscript>
+                                          <div>
+                                             <div style="width: 302px; height: 422px; position: relative;">
+                                                <div style="width: 302px; height: 422px; position: absolute;">
+                                                   <iframe src="https://www.google.com/recaptcha/api/fallback?k=6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"
+                                                      frameborder="0" scrolling="no"
+                                                      style="width: 302px; height:422px; border-style: none;">
+                                                   </iframe>
+                                                </div>
+                                             </div>
+                                             <div style="width: 300px; height: 60px; border-style: none;
+                                                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                                                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                                                <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                                   class="g-recaptcha-response"
+                                                   style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                                                   margin: 10px 25px; padding: 0px; resize: none;" >
+                                                </textarea>
+                                             </div>
+                                          </div>
+                                       </noscript>
+                                    </div>
+                                 </div>
+                                 <input type="submit" class="background-theme-color hover-background-theme-color btn-track" value="Eu quero mais informações">
+                                 <a class="close btn visible-xs" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i> Fechar</a>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="modal fade" id="modal-more-info-release-BS054" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <div class="modal-header"> <button type="button" class="close hidden-xs" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <b class="modal-title" id="myModalLabel">Eu quero mais informações</b> </div>
+                           <div class="modal-body">
+                              <form action="https://www.imobileonline.com.br/mais-informacoes-lancamento.html" id="FrmMaisInfoReleaseModal-BS054" class="form clearfix">
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <input type="text" name="NomeContato" placeholder="Nome" class="form-control" required>
+                                 </label>
+                                 <label class="label-asses">
+                                 <span>Email</span>
+                                 <input type="email" name="EmailContato" placeholder="E-mail" class="form-control" required>
+                                 </label>
+                                 <label class="label-asses">
+                                 <span>Telefone</span>
+                                 <input type="text" name="FoneContato" placeholder="Telefone" class="form-control telephoneMask" required>
+                                 </label>
+                                 <div class="grid-12">
+                                    <p>Receba contato por:</p>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoWhatsapp" value="true">
+                                       <i class="fa fa-whatsapp" aria-hidden="true"></i> Whatsapp
+                                       </label>
+                                    </div>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoPhone" value="true">
+                                       <i class="fa fa-phone" aria-hidden="true"></i> Telefone
+                                       </label>
+                                    </div>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoMail" value="true">
+                                       <i class="fa fa-envelope" aria-hidden="true"></i> E-mail
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <label class="label-asses">
+                                 <span>Descrição</span>
+                                 <textarea name="TxtMsgMaisInfo" class="form-control" cols="36" rows="3">Olá, gostaria de saber mais informações sobre o empreendimento em Recife no bairro Cordeiro a partir de: R$ 249.999,00 Ref. BS054. Aguardo o contato. Obrigado</textarea> </label> <input type="hidden" name="CodigoImovel" value="BS054"> <input type="hidden" name="pagina" value="home"> <input type="hidden" name="linkPagina" value=""> <input type="hidden" name="tipo" value="empreendimento"> <input type="hidden" name="empName" value="Edifício Alameda dos Nobres">
+                                 <input type="hidden" id="_nome_" name="_nome_" value="">
+                                 <input type="text" id="_email_" name="_email_" class="hidden" value="">
+                                 <div class="row">
+                                    <div class="col-xs-12" style="margin-bottom:15px;margin-left: 13px">
+                                       <div class="g-recaptcha" data-sitekey="6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"></div>
+                                       <noscript>
+                                          <div>
+                                             <div style="width: 302px; height: 422px; position: relative;">
+                                                <div style="width: 302px; height: 422px; position: absolute;">
+                                                   <iframe src="https://www.google.com/recaptcha/api/fallback?k=6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"
+                                                      frameborder="0" scrolling="no"
+                                                      style="width: 302px; height:422px; border-style: none;">
+                                                   </iframe>
+                                                </div>
+                                             </div>
+                                             <div style="width: 300px; height: 60px; border-style: none;
+                                                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                                                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                                                <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                                   class="g-recaptcha-response"
+                                                   style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                                                   margin: 10px 25px; padding: 0px; resize: none;" >
+                                                </textarea>
+                                             </div>
+                                          </div>
+                                       </noscript>
+                                    </div>
+                                 </div>
+                                 <input type="submit" class="background-theme-color hover-background-theme-color btn-track" value="Eu quero mais informações">
+                                 <a class="close btn visible-xs" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i> Fechar</a>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="modal fade" id="modal-more-info-release-LNR3" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <div class="modal-header"> <button type="button" class="close hidden-xs" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <b class="modal-title" id="myModalLabel">Eu quero mais informações</b> </div>
+                           <div class="modal-body">
+                              <form action="https://www.imobileonline.com.br/mais-informacoes-lancamento.html" id="FrmMaisInfoReleaseModal-LNR3" class="form clearfix">
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <input type="text" name="NomeContato" placeholder="Nome" class="form-control" required>
+                                 </label>
+                                 <label class="label-asses">
+                                 <span>Email</span>
+                                 <input type="email" name="EmailContato" placeholder="E-mail" class="form-control" required>
+                                 </label>
+                                 <label class="label-asses">
+                                 <span>Telefone</span>
+                                 <input type="text" name="FoneContato" placeholder="Telefone" class="form-control telephoneMask" required>
+                                 </label>
+                                 <div class="grid-12">
+                                    <p>Receba contato por:</p>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoWhatsapp" value="true">
+                                       <i class="fa fa-whatsapp" aria-hidden="true"></i> Whatsapp
+                                       </label>
+                                    </div>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoPhone" value="true">
+                                       <i class="fa fa-phone" aria-hidden="true"></i> Telefone
+                                       </label>
+                                    </div>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoMail" value="true">
+                                       <i class="fa fa-envelope" aria-hidden="true"></i> E-mail
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <label class="label-asses">
+                                 <span>Descrição</span>
+                                 <textarea name="TxtMsgMaisInfo" class="form-control" cols="36" rows="3">Olá, gostaria de saber mais informações sobre o empreendimento em Jaboatão dos Guararapes no bairro Candeias a partir de: R$ 135.400,00 Ref. LNR3. Aguardo o contato. Obrigado</textarea> </label> <input type="hidden" name="CodigoImovel" value="LNR3"> <input type="hidden" name="pagina" value="home"> <input type="hidden" name="linkPagina" value=""> <input type="hidden" name="tipo" value="empreendimento"> <input type="hidden" name="empName" value="Ecovila Praia">
+                                 <input type="hidden" id="_nome_" name="_nome_" value="">
+                                 <input type="text" id="_email_" name="_email_" class="hidden" value="">
+                                 <div class="row">
+                                    <div class="col-xs-12" style="margin-bottom:15px;margin-left: 13px">
+                                       <div class="g-recaptcha" data-sitekey="6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"></div>
+                                       <noscript>
+                                          <div>
+                                             <div style="width: 302px; height: 422px; position: relative;">
+                                                <div style="width: 302px; height: 422px; position: absolute;">
+                                                   <iframe src="https://www.google.com/recaptcha/api/fallback?k=6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"
+                                                      frameborder="0" scrolling="no"
+                                                      style="width: 302px; height:422px; border-style: none;">
+                                                   </iframe>
+                                                </div>
+                                             </div>
+                                             <div style="width: 300px; height: 60px; border-style: none;
+                                                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                                                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                                                <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                                   class="g-recaptcha-response"
+                                                   style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                                                   margin: 10px 25px; padding: 0px; resize: none;" >
+                                                </textarea>
+                                             </div>
+                                          </div>
+                                       </noscript>
+                                    </div>
+                                 </div>
+                                 <input type="submit" class="background-theme-color hover-background-theme-color btn-track" value="Eu quero mais informações">
+                                 <a class="close btn visible-xs" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i> Fechar</a>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+                  <div class="modal fade" id="modal-more-info-release-BS020" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+                     <div class="modal-dialog" role="document">
+                        <div class="modal-content">
+                           <div class="modal-header"> <button type="button" class="close hidden-xs" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button> <b class="modal-title" id="myModalLabel">Eu quero mais informações</b> </div>
+                           <div class="modal-body">
+                              <form action="https://www.imobileonline.com.br/mais-informacoes-lancamento.html" id="FrmMaisInfoReleaseModal-BS020" class="form clearfix">
+                                 <label class="label-asses">
+                                 <span>Nome</span>
+                                 <input type="text" name="NomeContato" placeholder="Nome" class="form-control" required>
+                                 </label>
+                                 <label class="label-asses">
+                                 <span>Email</span>
+                                 <input type="email" name="EmailContato" placeholder="E-mail" class="form-control" required>
+                                 </label>
+                                 <label class="label-asses">
+                                 <span>Telefone</span>
+                                 <input type="text" name="FoneContato" placeholder="Telefone" class="form-control telephoneMask" required>
+                                 </label>
+                                 <div class="grid-12">
+                                    <p>Receba contato por:</p>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoWhatsapp" value="true">
+                                       <i class="fa fa-whatsapp" aria-hidden="true"></i> Whatsapp
+                                       </label>
+                                    </div>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoPhone" value="true">
+                                       <i class="fa fa-phone" aria-hidden="true"></i> Telefone
+                                       </label>
+                                    </div>
+                                    <div class="radio-inline">
+                                       <label>
+                                       <input type="checkbox" name="ContatoMail" value="true">
+                                       <i class="fa fa-envelope" aria-hidden="true"></i> E-mail
+                                       </label>
+                                    </div>
+                                 </div>
+                                 <label class="label-asses">
+                                 <span>Descrição</span>
+                                 <textarea name="TxtMsgMaisInfo" class="form-control" cols="36" rows="3">Olá, gostaria de saber mais informações sobre o condomínio em São Lourenço da Mata no bairro Muribara a partir de: R$ 120.000,00 Ref. BS020. Aguardo o contato. Obrigado</textarea> </label> <input type="hidden" name="CodigoImovel" value="BS020"> <input type="hidden" name="pagina" value="home"> <input type="hidden" name="linkPagina" value=""> <input type="hidden" name="tipo" value="empreendimento"> <input type="hidden" name="empName" value="Reserva São Lourenço">
+                                 <input type="hidden" id="_nome_" name="_nome_" value="">
+                                 <input type="text" id="_email_" name="_email_" class="hidden" value="">
+                                 <div class="row">
+                                    <div class="col-xs-12" style="margin-bottom:15px;margin-left: 13px">
+                                       <div class="g-recaptcha" data-sitekey="6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"></div>
+                                       <noscript>
+                                          <div>
+                                             <div style="width: 302px; height: 422px; position: relative;">
+                                                <div style="width: 302px; height: 422px; position: absolute;">
+                                                   <iframe src="https://www.google.com/recaptcha/api/fallback?k=6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"
+                                                      frameborder="0" scrolling="no"
+                                                      style="width: 302px; height:422px; border-style: none;">
+                                                   </iframe>
+                                                </div>
+                                             </div>
+                                             <div style="width: 300px; height: 60px; border-style: none;
+                                                bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                                                background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                                                <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                                   class="g-recaptcha-response"
+                                                   style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                                                   margin: 10px 25px; padding: 0px; resize: none;" >
+                                                </textarea>
+                                             </div>
+                                          </div>
+                                       </noscript>
+                                    </div>
+                                 </div>
+                                 <input type="submit" class="background-theme-color hover-background-theme-color btn-track" value="Eu quero mais informações">
+                                 <a class="close btn visible-xs" data-dismiss="modal" aria-label="Close"><i class="fa fa-times" aria-hidden="true"></i> Fechar</a>
+                              </form>
+                           </div>
+                        </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+            <script>
+               document.addEventListener('DOMContentLoaded', function() {
+                   document.querySelector("#bg-banner").style.visibility = "visible";
+               });
+            </script>  
+            <section id="bg-featured-release" class="featured grid-12">
+               <div class="container">
+                  <header class="col-xs-12">
+                     <h2>Nossos Empreendimentos</h2>
+                     <hr class="background-theme-color">
+                  </header>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                     <article class="box-featured featured-release">
+                        <header class="border-theme-color"> <img srcset="https://vault.imob.online/resized/u4623/buildings/photos/36153/2nUcjASKdqmWRrDSL9lpXzJS-piscinasite2.jpg/medium.jpg 768w, https://vault.imob.online/resized/u4623/buildings/photos/36153/2nUcjASKdqmWRrDSL9lpXzJS-piscinasite2.jpg/medium.jpg 300w" src="../vault.imob.online/resized/u4623/buildings/photos/36153/2nUcjASKdqmWRrDSL9lpXzJS-piscinasite2.jpg/medium.jpg" class="img-responsive" alt="Empreendimento, código BS038 em Jaboatão dos Guararapes, no bairro Piedade"> <span class="background-theme-color">Em construção</span>  <i class="ico-video"></i>  </header>
+                        <h3>  <b>Ocean Way</b>  <span> <i class="fa fa-map-marker" aria-hidden="true"></i> Jaboatão dos Guararapes<br> Piedade </span> </h3>
+                        <ul>
+                           <li class="medium-item"><i class="fa fa-bed"></i><br><span>Dorm.</span><br><b>3</b></li>
+                           <li class="medium-item"><i class="fa fa-bed"></i><br><span>Suítes</span><br><b>3</b></li>
+                           <li class="medium-item"><i class="fa fa-car"></i><br><span>Vagas</span><br><b>2</b></li>
+                           <li class="medium-item"><i class="fa fa-arrows-alt"></i><br><span>Área m²</span><br><b>98 a 98</b>
+                           <li> 
+                        </ul>
+                        <p><small>A Partir de</small><br><b>R$ 646.729,46</b></p>
+                        <footer> <a href="lancamento-7-empreendimento-em-jaboatao-dos-guararapes-bairro-piedade.html#detalhes" class="background-theme-color hover-background-theme-color">Saiba mais informações</a> </footer>
+                        <a href="lancamento-7-empreendimento-em-jaboatao-dos-guararapes-bairro-piedade.html">Link para mais detalhes sobre o empreendimento</a> 
+                     </article>
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                     <article class="box-featured featured-release">
+                        <header class="border-theme-color"> <img srcset="https://vault.imob.online/resized/u4623/buildings/photos/41840/WcWLR5qpJFT9VrB2EaVl7T70-banner-show1-1024x512.jpg/medium.jpg 768w, https://vault.imob.online/resized/u4623/buildings/photos/41840/WcWLR5qpJFT9VrB2EaVl7T70-banner-show1-1024x512.jpg/medium.jpg 300w" src="../vault.imob.online/resized/u4623/buildings/photos/41840/WcWLR5qpJFT9VrB2EaVl7T70-banner-show1-1024x512.jpg/medium.jpg" class="img-responsive" alt="Empreendimento, código LNR3 em Jaboatão dos Guararapes, no bairro Candeias"> <span class="background-theme-color">Futuro lançamento</span>  <i class="ico-video"></i>  </header>
+                        <h3>  <b>Ecovila Praia</b>  <span> <i class="fa fa-map-marker" aria-hidden="true"></i> Jaboatão dos Guararapes<br> Candeias </span> </h3>
+                        <ul>
+                           <li class="medium-item"><i class="fa fa-bed"></i><br><span>Dorm.</span><br><b>2</b></li>
+                           <li class="medium-item"><i class="fa fa-bed"></i><br><span>Suítes</span><br><b>---</b></li>
+                           <li class="medium-item"><i class="fa fa-car"></i><br><span>Vagas</span><br><b>1</b></li>
+                           <li class="medium-item"><i class="fa fa-arrows-alt"></i><br><span>Área m²</span><br><b>50 a 50</b>
+                           <li> 
+                        </ul>
+                        <p><small>A Partir de</small><br><b>R$ 135.400,00</b></p>
+                        <footer> <a href="lancamento-21-empreendimento-em-jaboatao-dos-guararapes-bairro-candeias.html#detalhes" class="background-theme-color hover-background-theme-color">Saiba mais informações</a> </footer>
+                        <a href="lancamento-21-empreendimento-em-jaboatao-dos-guararapes-bairro-candeias.html">Link para mais detalhes sobre o empreendimento</a> 
+                     </article>
+                  </div>
+                  <div class="col-md-4 col-sm-6 col-xs-12">
+                     <article class="box-featured featured-release">
+                        <header class="border-theme-color"> <img srcset="https://vault.imob.online/resized/u4623/buildings/photos/37574/YJ6JH9hhR0rVrUfVU384Dt7a-20.jpg/medium.jpg 768w, https://vault.imob.online/resized/u4623/buildings/photos/37574/YJ6JH9hhR0rVrUfVU384Dt7a-20.jpg/medium.jpg 300w" src="../vault.imob.online/resized/u4623/buildings/photos/37574/YJ6JH9hhR0rVrUfVU384Dt7a-20.jpg/medium.jpg" class="img-responsive" alt="Empreendimento, código BS054 em Recife, no bairro Cordeiro"> <span class="background-theme-color">Em construção</span>  <i class="ico-video"></i>  </header>
+                        <h3>  <b>Edifício Alameda dos Nobres</b>  <span> <i class="fa fa-map-marker" aria-hidden="true"></i> Recife<br> Cordeiro </span> </h3>
+                        <ul>
+                           <li class="medium-item"><i class="fa fa-bed"></i><br><span>Dorm.</span><br><b>3</b></li>
+                           <li class="medium-item"><i class="fa fa-bed"></i><br><span>Suítes</span><br><b>2</b></li>
+                           <li class="medium-item"><i class="fa fa-car"></i><br><span>Vagas</span><br><b>2</b></li>
+                           <li class="medium-item"><i class="fa fa-arrows-alt"></i><br><span>Área m²</span><br><b>70 a 70</b>
+                           <li> 
+                        </ul>
+                        <p><small>A Partir de</small><br><b>R$ 249.999,00</b></p>
+                        <footer> <a href="lancamento-17-empreendimento-em-recife-bairro-cordeiro.html#detalhes" class="background-theme-color hover-background-theme-color">Saiba mais informações</a> </footer>
+                        <a href="lancamento-17-empreendimento-em-recife-bairro-cordeiro.html">Link para mais detalhes sobre o empreendimento</a> 
+                     </article>
+                  </div>
+                  <div class="col-xs-12"> <a class="show-more border-theme-color font-theme-color hover-background-theme-color" href="pr-empreendimentos.html">Ver todos Empreendimentos</a> </div>
+               </div>
+            </section>
+            <section id="bg-featured-properties" class="featured grid-12">
+               <div class="container">
+                  <header class="col-xs-12">
+                     <h2>Veja mais destaques</h2>
+                     <hr class="background-theme-color">
+                  </header>
+                  <div class="col-md-4 col-xs-12 col-sm-6">
+                     <article class="box-featured featured-properties">
+                        <header class="border-theme-color">  <span class="background-theme-color">Pronto para morar</span>  <img srcset="https://vault.imob.online/resized/u4623/properties/photos/15835635/0YSrt2j3BADpfArmmryFrNAi-99281820.jpg/klarge.jpg 768w, https://vault.imob.online/resized/u4623/properties/photos/15835635/0YSrt2j3BADpfArmmryFrNAi-99281820.jpg/klarge.jpg 300w" src="../vault.imob.online/resized/u4623/properties/photos/15835635/0YSrt2j3BADpfArmmryFrNAi-99281820.jpg/klarge.jpg" class="img-responsive" alt="Flat, código ANC-10 em Jaboatão dos Guararapes, bairro Barra de Jangada" >   </header>
+                        <h3> Flat para <b>Venda</b><br> em <b>Jaboatão dos Guararapes</b> <span><i class="fa fa-map-marker" aria-hidden="true"></i> Barra de Jangada</span> </h3>
+                        <ul>
+                           <li class="small-item"><i class="fa fa-bed"></i><br><span>Dorm.</span><br><b>1</b></li>
+                           <li class="small-item"><i class="fa fa-bed"></i><br><span>Suítes</span><br><b>1</b></li>
+                           <li class="small-item"><i class="fa fa-car"></i><br><span>Vagas</span><br><b>1</b></li>
+                           <li class="small-item"><i class="fa fa-tint"></i><br><span>Banheiros</span><br><b>1</b></li>
+                           <li class="small-item"><i class="fa fa-arrows-alt"></i><br><span>Área m²</span><br><b>---</b></li>
+                        </ul>
+                        <p class=""> <span class="background-theme-color">Venda</span><b>R$ 250.000,00</b> </p>
+                        <p class="inactive"> <span class="background-theme-color">Aluguel</span><b>-----</b> </p>
+                        <p class="inactive"> <span class="background-theme-color">Temporada</span><b>-----</b> </p>
+                        <p class="inactive"> <span class="background-theme-color">Arrendamento</span><b>-----</b> </p>
+                        <footer> <a href="34-flat-em-jaboatao-dos-guararapes-bairro-barra-de-jangada.html#detalhes" class="background-theme-color hover-background-theme-color">Saiba mais informações</a> </footer>
+                        <a href="34-flat-em-jaboatao-dos-guararapes-bairro-barra-de-jangada.html">Link para mais detalhes sobre o imóvel</a> 
+                     </article>
+                  </div>
+                  <div class="col-md-4 col-xs-12 col-sm-6">
+                     <article class="box-featured featured-properties">
+                        <header class="border-theme-color">  <span class="background-theme-color">Pronto para morar</span>  <img srcset="https://vault.imob.online/resized/u4623/properties/photos/15818029/i6upc8HJ3l4Pfny3WOJDDIM8-hotel369_11176.jpg/klarge.jpg 768w, https://vault.imob.online/resized/u4623/properties/photos/15818029/i6upc8HJ3l4Pfny3WOJDDIM8-hotel369_11176.jpg/klarge.jpg 300w" src="../vault.imob.online/resized/u4623/properties/photos/15818029/i6upc8HJ3l4Pfny3WOJDDIM8-hotel369_11176.jpg/klarge.jpg" class="img-responsive" alt="Flat, código ANC-04 em Recife, bairro Boa Viagem" >   </header>
+                        <h3> Flat para <b>Venda</b><br> em <b>Recife</b> <span><i class="fa fa-map-marker" aria-hidden="true"></i> Boa Viagem</span> </h3>
+                        <ul>
+                           <li class="small-item"><i class="fa fa-bed"></i><br><span>Dorm.</span><br><b>1</b></li>
+                           <li class="small-item"><i class="fa fa-bed"></i><br><span>Suítes</span><br><b>1</b></li>
+                           <li class="small-item"><i class="fa fa-car"></i><br><span>Vagas</span><br><b>---</b></li>
+                           <li class="small-item"><i class="fa fa-tint"></i><br><span>Banheiros</span><br><b>1</b></li>
+                           <li class="small-item"><i class="fa fa-arrows-alt"></i><br><span>Área m²</span><br><b>41</b></li>
+                        </ul>
+                        <p class=""> <span class="background-theme-color">Venda</span><b>R$ 380.000,00</b> </p>
+                        <p class="inactive"> <span class="background-theme-color">Aluguel</span><b>-----</b> </p>
+                        <p class="inactive"> <span class="background-theme-color">Temporada</span><b>-----</b> </p>
+                        <p class="inactive"> <span class="background-theme-color">Arrendamento</span><b>-----</b> </p>
+                        <footer> <a href="18-flat-em-recife-bairro-boa-viagem.html#detalhes" class="background-theme-color hover-background-theme-color">Saiba mais informações</a> </footer>
+                        <a href="18-flat-em-recife-bairro-boa-viagem.html">Link para mais detalhes sobre o imóvel</a> 
+                     </article>
+                  </div>
+                  <div class="col-md-4 col-xs-12 hidden-sm">
+                     <article class="box-featured featured-properties">
+                        <header class="border-theme-color">  <span class="background-theme-color">Pronto para morar</span>  <img srcset="https://vault.imob.online/resized/u4623/properties/photos/15805724/pF51yzO27v8708sk0o9K5GQa-bc39d0e68d4856e30cd0e821c150c9a0.jpg/klarge.jpg 768w, https://vault.imob.online/resized/u4623/properties/photos/15805724/pF51yzO27v8708sk0o9K5GQa-bc39d0e68d4856e30cd0e821c150c9a0.jpg/klarge.jpg 300w" src="../vault.imob.online/resized/u4623/properties/photos/15805724/pF51yzO27v8708sk0o9K5GQa-bc39d0e68d4856e30cd0e821c150c9a0.jpg/klarge.jpg" class="img-responsive" alt="Flat, código ANC-06 em Recife, bairro Boa Viagem" >  <i class="ico-video"></i>   </header>
+                        <h3> Flat para <b>Venda</b><br> em <b>Recife</b> <span><i class="fa fa-map-marker" aria-hidden="true"></i> Boa Viagem</span> </h3>
+                        <ul>
+                           <li class="small-item"><i class="fa fa-bed"></i><br><span>Dorm.</span><br><b>1</b></li>
+                           <li class="small-item"><i class="fa fa-bed"></i><br><span>Suítes</span><br><b>---</b></li>
+                           <li class="small-item"><i class="fa fa-car"></i><br><span>Vagas</span><br><b>1</b></li>
+                           <li class="small-item"><i class="fa fa-tint"></i><br><span>Banheiros</span><br><b>1</b></li>
+                           <li class="small-item"><i class="fa fa-arrows-alt"></i><br><span>Área m²</span><br><b>34</b></li>
+                        </ul>
+                        <p class=""> <span class="background-theme-color">Venda</span><b>R$ 260.000,00</b> </p>
+                        <p class="inactive"> <span class="background-theme-color">Aluguel</span><b>-----</b> </p>
+                        <p class="inactive"> <span class="background-theme-color">Temporada</span><b>-----</b> </p>
+                        <p class="inactive"> <span class="background-theme-color">Arrendamento</span><b>-----</b> </p>
+                        <footer> <a href="2-flat-em-recife-bairro-boa-viagem.html#detalhes" class="background-theme-color hover-background-theme-color">Saiba mais informações</a> </footer>
+                        <a href="2-flat-em-recife-bairro-boa-viagem.html">Link para mais detalhes sobre o imóvel</a> 
+                     </article>
+                  </div>
+                  <div class="col-xs-12">
+                     <div class="banner-register" style="background: url() repeat ;">
+                        <a href="cadastre-seu-imovel.html" title="Anunciar imóvel">link para anunciar imóvel</a> 
+                        <div class="overlay"></div>
+                        <i class="fa fa-bullhorn hidden-xs" aria-hidden="true"></i> 
+                        <div class="col-sm-8 col-xs-12">
+                           <b>Anuncie seu imóvel aqui</b> 
+                           <p>Receba muito mais contatos para negociar seu imóvel</p>
+                        </div>
+                        <div class="col-sm-4 col-xs-12"> <a href="cadastre-seu-imovel.html#anuncie" class="background-theme-color hover-background-theme-color" title="Link para o anuncie seu imóvel">Anunciar aqui</a> </div>
+                     </div>
+                  </div>
+                  <div class="col-md-4 col-xs-12 col-sm-6">
+                     <article class="box-featured featured-properties">
+                        <header class="border-theme-color">  <span class="background-theme-color">Usado</span>  <img srcset="https://vault.imob.online/resized/u4623/properties/photos/15821126/aSShcynmw7yF4T5ayL4CJXvo-e392d64b-6090-484b-ae89-3916d15589ba.jpg/klarge.jpg 768w, https://vault.imob.online/resized/u4623/properties/photos/15821126/aSShcynmw7yF4T5ayL4CJXvo-e392d64b-6090-484b-ae89-3916d15589ba.jpg/klarge.jpg 300w" src="../vault.imob.online/resized/u4623/properties/photos/15821126/aSShcynmw7yF4T5ayL4CJXvo-e392d64b-6090-484b-ae89-3916d15589ba.jpg/klarge.jpg" class="img-responsive" alt="Chácara, código ANC14 em Camaragibe, bairro Aldeia dos Camarás" >   </header>
+                        <h3> Chácara para <b>Venda</b><br> em <b>Camaragibe</b> <span><i class="fa fa-map-marker" aria-hidden="true"></i> Aldeia dos Camarás</span> </h3>
+                        <ul>
+                           <li class="small-item"><i class="fa fa-bed"></i><br><span>Dorm.</span><br><b>3</b></li>
+                           <li class="small-item"><i class="fa fa-bed"></i><br><span>Suítes</span><br><b>2</b></li>
+                           <li class="small-item"><i class="fa fa-car"></i><br><span>Vagas</span><br><b>---</b></li>
+                           <li class="small-item"><i class="fa fa-tint"></i><br><span>Banheiros</span><br><b>1</b></li>
+                           <li class="small-item"> <i class="fa fa-arrows-alt"></i><br> <span>Área m²</span><br> <b>5400000</b> </li>
+                        </ul>
+                        <p class=""> <span class="background-theme-color">Venda</span><b>R$ 1.050.000,00</b> </p>
+                        <p class="inactive"> <span class="background-theme-color">Aluguel</span><b>-----</b> </p>
+                        <p class="inactive"> <span class="background-theme-color">Temporada</span><b>-----</b> </p>
+                        <p class="inactive"> <span class="background-theme-color">Arrendamento</span><b>-----</b> </p>
+                        <footer> <a href="22-chacara-em-camaragibe-bairro-aldeia-dos-camaras.html#detalhes" class="background-theme-color hover-background-theme-color">Saiba mais informações</a> </footer>
+                        <a href="22-chacara-em-camaragibe-bairro-aldeia-dos-camaras.html">Link para mais detalhes sobre o imóvel</a> 
+                     </article>
+                  </div>
+                  <div class="col-md-4 col-xs-12 col-sm-6">
+                     <article class="box-featured featured-properties">
+                        <header class="border-theme-color">  <span class="background-theme-color">Usado</span>  <img srcset="https://vault.imob.online/resized/u4623/properties/photos/15820731/6nz8ETl7wkit61C6klYBgifj-apartamento-pau-amarelo-110m-016.jpg/klarge.jpg 768w, https://vault.imob.online/resized/u4623/properties/photos/15820731/6nz8ETl7wkit61C6klYBgifj-apartamento-pau-amarelo-110m-016.jpg/klarge.jpg 300w" src="../vault.imob.online/resized/u4623/properties/photos/15820731/6nz8ETl7wkit61C6klYBgifj-apartamento-pau-amarelo-110m-016.jpg/klarge.jpg" class="img-responsive" alt="Apartamento, código BS009 em Paulista, bairro Janga" >   </header>
+                        <h3> Apartamento para <b>Venda</b><br> em <b>Paulista</b> <span><i class="fa fa-map-marker" aria-hidden="true"></i> Janga</span> </h3>
+                        <ul>
+                           <li class="small-item"><i class="fa fa-bed"></i><br><span>Dorm.</span><br><b>3</b></li>
+                           <li class="small-item"><i class="fa fa-bed"></i><br><span>Suítes</span><br><b>1</b></li>
+                           <li class="small-item"><i class="fa fa-car"></i><br><span>Vagas</span><br><b>1</b></li>
+                           <li class="small-item"><i class="fa fa-tint"></i><br><span>Banheiros</span><br><b>1</b></li>
+                           <li class="small-item"><i class="fa fa-arrows-alt"></i><br><span>Área m²</span><br><b>110</b></li>
+                        </ul>
+                        <p class=""> <span class="background-theme-color">Venda</span><b>R$ 160.000,00</b> </p>
+                        <p class="inactive"> <span class="background-theme-color">Aluguel</span><b>-----</b> </p>
+                        <p class="inactive"> <span class="background-theme-color">Temporada</span><b>-----</b> </p>
+                        <p class="inactive"> <span class="background-theme-color">Arrendamento</span><b>-----</b> </p>
+                        <footer> <a href="21-apartamento-em-paulista-bairro-janga.html#detalhes" class="background-theme-color hover-background-theme-color">Saiba mais informações</a> </footer>
+                        <a href="21-apartamento-em-paulista-bairro-janga.html">Link para mais detalhes sobre o imóvel</a> 
+                     </article>
+                  </div>
+                  <div class="col-md-4 col-xs-12 hidden-sm">
+                     <article class="box-featured featured-properties">
+                        <header class="border-theme-color">  <span class="background-theme-color">Em construção</span>  <img srcset="https://vault.imob.online/resized/u4623/properties/photos/15808131/0NeM2woRZneL5BeGpH7xnxw8-pernambuco-recife-empresarial-beachclasshotelseresidence-flat-topo.jpg/klarge.jpg 768w, https://vault.imob.online/resized/u4623/properties/photos/15808131/0NeM2woRZneL5BeGpH7xnxw8-pernambuco-recife-empresarial-beachclasshotelseresidence-flat-topo.jpg/klarge.jpg 300w" src="../vault.imob.online/resized/u4623/properties/photos/15808131/0NeM2woRZneL5BeGpH7xnxw8-pernambuco-recife-empresarial-beachclasshotelseresidence-flat-topo.jpg/klarge.jpg" class="img-responsive" alt="Flat, código ANC-011 em Recife, bairro Boa Viagem" >   </header>
+                        <h3> Flat para <b>Venda</b><br> em <b>Recife</b> <span><i class="fa fa-map-marker" aria-hidden="true"></i> Boa Viagem</span> </h3>
+                        <ul>
+                           <li class="small-item"><i class="fa fa-bed"></i><br><span>Dorm.</span><br><b>1</b></li>
+                           <li class="small-item"><i class="fa fa-bed"></i><br><span>Suítes</span><br><b>1</b></li>
+                           <li class="small-item"><i class="fa fa-car"></i><br><span>Vagas</span><br><b>1</b></li>
+                           <li class="small-item"><i class="fa fa-tint"></i><br><span>Banheiros</span><br><b>1</b></li>
+                           <li class="small-item"><i class="fa fa-arrows-alt"></i><br><span>Área m²</span><br><b>40</b></li>
+                        </ul>
+                        <p class=""> <span class="background-theme-color">Venda</span><b>R$ 250.000,00</b> </p>
+                        <p class="inactive"> <span class="background-theme-color">Aluguel</span><b>-----</b> </p>
+                        <p class="inactive"> <span class="background-theme-color">Temporada</span><b>-----</b> </p>
+                        <p class="inactive"> <span class="background-theme-color">Arrendamento</span><b>-----</b> </p>
+                        <footer> <a href="4-flat-em-recife-bairro-boa-viagem.html#detalhes" class="background-theme-color hover-background-theme-color">Saiba mais informações</a> </footer>
+                        <a href="4-flat-em-recife-bairro-boa-viagem.html">Link para mais detalhes sobre o imóvel</a> 
+                     </article>
+                  </div>
+               </div>
+            </section>
+            <section id="bg-partners" class="grid-12">
+               <div class="container">
+                  <div class="col-xs-12">
+                     <div class="partners-slider owl-carousel">
+                        <div>  <a href="https://www.balcaodeservico.com.br/imovel/cha¡cara-vender-pe-cidade/207/" target="_blank" class="partner-item"> <img src="../vault.imob.online/u4623/websites/10408541/banners/16632665/SPB94P32WqtKaySClIEm44bj-fanpage_facebook.jpg" class="img-responsive" title="" alt="Chácara Bela Vista em Igarassu" /> </a>  </div>
+                        <div>  <a href="https://www.balcaodeservico.com.br/imovel/casa-vender-pe-cidade/177/" target="_blank" class="partner-item"> <img src="../vault.imob.online/u4623/websites/10408541/banners/16632665/a1oJWxdjSwFRskPjzcsVRmz4-_dss4572.jpg" class="img-responsive" title="" alt="Nui Supreme Beach Living" /> </a>  </div>
+                        <div>  <a href="https://www.balcaodeservico.com.br/imovel/apartamento-vender-pe-cidade/175/" target="_blank" class="partner-item"> <img src="../vault.imob.online/u4623/websites/10408541/banners/16632665/srL1fn0dsOqfKYtOOmxWx0zf-apto_janga_3_quartos_pronto-2-1.jpg" class="img-responsive" title="" alt="Janga Prince" /> </a>  </div>
+                        <div>  <a href="https://www.balcaodeservico.com.br/imovel/apartamento-vender-pe-cidade/180/" target="_blank" class="partner-item"> <img src="../vault.imob.online/u4623/websites/10408541/banners/16632665/63vH7cTRo0Ylf14Yy9CXRFh5-1.jpg" class="img-responsive" title="" alt="Reserva São Lourenço" /> </a>  </div>
+                        <div>  <a href="https://www.balcaodeservico.com.br/imovel/apartamento-vender-pe-cidade/179/" target="_blank" class="partner-item"> <img src="../vault.imob.online/u4623/websites/10408541/banners/16632665/8xqrU78saiMd0uHmRG3i3WaU-reserva_ipojuca_apartamento_2_quartos19.jpg" class="img-responsive" title="" alt="Reserva Ipojuca" /> </a>  </div>
+                        <div>  <a href="https://www.balcaodeservico.com.br/imovel/apartamento-vender-pe-cidade/305/" target="_blank" class="partner-item"> <img src="../vault.imob.online/u4623/websites/10408541/banners/16632665/HOa2j4rzMSIpMTXJyQhlgzPG-3.jpg" class="img-responsive" title="" alt="Edifício Alameda dos Nobres" /> </a>  </div>
+                     </div>
+                  </div>
+               </div>
+            </section>
+         </div>
+      </div>

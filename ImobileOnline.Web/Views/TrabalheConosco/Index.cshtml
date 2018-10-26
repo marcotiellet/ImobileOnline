@@ -1,0 +1,187 @@
+      <div id="app" style="width: 100%; float: left; background-color: #FFF;">
+         <section class="bg-paginas grid-12">
+            <div class="breadcrumb">
+               <div class="grid-12 background-theme-color">
+                  <div class="container">
+                     <div class="col-xs-12">
+                        <ol>
+                           <li><a href="index.html">Página Inicial</a></li>
+                           <li class="active">Trabalhe Conosco</li>
+                        </ol>
+                     </div>
+                  </div>
+               </div>
+            </div>
+            <div class="bg-header grid-12">
+               <div class="container">
+                  <div class="col-xs-12">
+                     <h1>Trabalhe Conosco</h1>
+                  </div>
+               </div>
+            </div>
+            <div class="grid-12 content-page">
+               <div class="container">
+                  <form method="POST" action="https://www.imobileonline.com.br/trabalhe-conosco.html" accept-charset="UTF-8" id="frmTrabalhe" class="form form-custom">
+                     <input name="_token" type="hidden" value="qruws7AuGP2pgHbrPDN9JE6Mr58eZ1ohgLl3Ic0K">
+                     &nbsp;<br>
+                     <div class="form-group col-xs-12">
+                        <fieldset>
+                           <legend>Dados do Candidato</legend>
+                           <p>
+                              <input placeholder="Nome" class="form-control" required="required" id="workWithUs-nome" name="nome" type="text" value="">
+                           </p>
+                           <p>
+                              <input placeholder="Telefone" class="form-control telephoneMask" required="required" id="workWithUs-telefone" name="telefone" type="text" value="">
+                           </p>
+                           <p>
+                              <input placeholder="E-mail" class="form-control" required="required" id="workWithUs-email" name="email" type="email" value="">
+                           </p>
+                        </fieldset>
+                     </div>
+                     &nbsp;<br>
+                     <div class="form-group col-xs-12">
+                        <fieldset>
+                           <legend>Dados Profissionais</legend>
+                           <p>
+                              Você já trabalhou com vendas?
+                           </p>
+                           <div class="radio-inline">
+                              <input id="VendasSim" class="Emprego" name="emprego" type="radio" value="Sim">
+                              <label for="VendasSim">Sim</label>
+                           </div>
+                           <div class="radio-inline">
+                              <input id="VendasNao" class="Emprego" name="emprego" type="radio" value="N&atilde;o">
+                              <label for="VendasNao">N&atilde;o</label>
+                           </div>
+                           <div class="grid-12" id="RamoVendas" style="display:none">
+                              <div class="form-group grid-12">
+                                 <input placeholder="Em qual ramo?" class="form-control" name="text_ramo" type="text" value="">
+                              </div>
+                              <div class="form-group row">
+                                 <div class="col-sm-4 col-xs-12">
+                                    <input placeholder="Nome da empresa" class="form-control" name="nome_empresa" type="text" value="">
+                                 </div>
+                                 <div class="col-sm-4 col-xs-12">
+                                    <input placeholder="&Aacute;rea de atua&ccedil;&atilde;o" class="form-control" name="text_atuacao" type="text" value="">
+                                 </div>
+                                 <div class="col-sm-4 col-xs-12">
+                                    <input placeholder="Telefone" class="form-control telephoneMask" name="text_telefone" type="text" value="">
+                                 </div>
+                              </div>
+                           </div>
+                        </fieldset>
+                     </div>
+                     &nbsp;<br>
+                     <div class="form-group col-xs-12">
+                        <fieldset id="Escolaridade">
+                           <legend>Escolaridade</legend>
+                           <p>Você encontra-se em qual grau de escolaridade?</p>
+                           <div class="radio-inline">
+                              <input id="EnsinoFundamental" name="escolaridade" type="radio" value="Ensino Fundamental (1&ordf; a 8&ordf; s&eacute;rie)">
+                              <label for="EnsinoFundamental">Ensino Fundamental (1&ordf; a 8&ordf; s&eacute;rie)</label>
+                           </div>
+                           <div class="radio-inline">
+                              <input id="EnsinoMedio" name="escolaridade" type="radio" value="Ensino M&eacute;dio (1&ordm; ao 3&ordm; colegial)">
+                              <label for="EnsinoMedio">Ensino M&eacute;dio (1&ordm; ao 3&ordm; colegial)</label>
+                           </div>
+                           <div class="radio-inline">
+                              <input id="tecnico" name="escolaridade" type="radio" value="Ensino T&eacute;cnico">
+                              <label for="tecnico">Ensino T&eacute;cnico</label>
+                           </div>
+                           <div class="radio-inline">
+                              <input id="universitario" name="escolaridade" type="radio" value="Ensino Universit&aacute;rio">
+                              <label for="universitario">Ensino Universit&aacute;rio</label>
+                           </div>
+                        </fieldset>
+                     </div>
+                     &nbsp;<br>
+                     <div class="form-group col-xs-12">
+                        <fieldset>
+                           <legend>Informações Importantes</legend>
+                           <div class="form-group grid-12">
+                              <p>Tem veículo próprio?</p>
+                              <div class="radio-inline">
+                                 <input id="CarroSim" name="carro_proprio" type="radio" value="Sim">
+                                 <label for="CarroSim">Sim</label>
+                              </div>
+                              <div class="radio-inline">
+                                 <input id="CarroNao" name="carro_proprio" type="radio" value="N&atilde;o">
+                                 <label for="CarroNao">N&atilde;o</label>
+                              </div>
+                           </div>
+                           <div class="form-group grid-12">
+                              <p>Tem CRECI?</p>
+                              <div class="radio-inline">
+                                 <input id="CreciSim" name="possue_creci" type="radio" value="Sim">
+                                 <label for="CreciSim">Sim</label>
+                              </div>
+                              <div class="radio-inline">
+                                 <input id="CreciNao" name="possue_creci" type="radio" value="N&atilde;o">
+                                 <label for="CreciNao">N&atilde;o</label>
+                              </div>
+                           </div>
+                           <div class="form-group grid-12">
+                              <p>Tem interesse em fazer o técnico em transações imobiliárias para estar habilitado como corretor credenciado pelo CRECI?</p>
+                              <div class="radio-inline">
+                                 <input id="CursoSim" name="text_tecnico" type="radio" value="Sim">
+                                 <label for="CursoSim">Sim</label>
+                              </div>
+                              <div class="radio-inline">
+                                 <input id="CursoNao" name="text_tecnico" type="radio" value="N&atilde;o">
+                                 <label for="CursoNao">N&atilde;o</label>
+                              </div>
+                           </div>
+                           <div class="form-group grid-12">
+                              <p>Tem conhecimento em Informática?</p>
+                              <div class="radio-inline">
+                                 <input id="InformaticaSim" name="text_informatica" type="radio" value="Sim">
+                                 <label for="InformaticaSim">Sim</label>
+                              </div>
+                              <div class="radio-inline">
+                                 <input id="InformaticaNao" name="text_informatica" type="radio" value="N&atilde;o">
+                                 <label for="InformaticaNao">N&atilde;o</label>
+                              </div>
+                           </div>
+                        </fieldset>
+                     </div>
+                     &nbsp;<br>
+                     <div class="form-group col-xs-12">
+                        <fieldset>
+                           <legend>Informações Adicionais</legend>
+                           <textarea placeholder="Escreva o motivo pelo qual voc&ecirc; quer fazer parte do nosso quadro de corretores" class="form-control" cols="36" rows="5" name="descricao"></textarea>
+                        </fieldset>
+                     </div>
+                     <div class="row">
+                        <div class="col-xs-12" style="margin-bottom:15px;margin-left: 13px">
+                           <div class="g-recaptcha" data-sitekey="6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"></div>
+                           <noscript>
+                              <div>
+                                 <div style="width: 302px; height: 422px; position: relative;">
+                                    <div style="width: 302px; height: 422px; position: absolute;">
+                                       <iframe src="https://www.google.com/recaptcha/api/fallback?k=6Lfj_2QUAAAAAPXrQkxwbWn4JAqgm-CeUQSEY7ex"
+                                          frameborder="0" scrolling="no"
+                                          style="width: 302px; height:422px; border-style: none;">
+                                       </iframe>
+                                    </div>
+                                 </div>
+                                 <div style="width: 300px; height: 60px; border-style: none;
+                                    bottom: 12px; left: 25px; margin: 0px; padding: 0px; right: 25px;
+                                    background: #f9f9f9; border: 1px solid #c1c1c1; border-radius: 3px;">
+                                    <textarea id="g-recaptcha-response" name="g-recaptcha-response"
+                                       class="g-recaptcha-response"
+                                       style="width: 250px; height: 40px; border: 1px solid #c1c1c1;
+                                       margin: 10px 25px; padding: 0px; resize: none;" >
+                                    </textarea>
+                                 </div>
+                              </div>
+                           </noscript>
+                        </div>
+                     </div>
+                     <div class="form-group col-xs-6">
+                        <input class="background-theme-color hover-background-theme-color btn-track" id="btn-work-us" type="submit" value="Enviar">
+                     </div>
+                  </form>
+               </div>
+            </div>
+         </section>
+      </div>
