@@ -12,6 +12,7 @@ namespace ImobileOnline.Web.Controllers
     {
         public IActionResult Index()
         {
+            ViewBag.Message = "Principal";
             return View();
         }
 

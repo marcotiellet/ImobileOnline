@@ -23,18 +23,18 @@
       <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
       <meta name="language" content="pt-br" />
       <meta name="rating" content="General" />
-      <meta name="author" content="microsistec.com.br" />
+      <meta name="author" content="MarcoTiellet" />
       <meta name="ICBM" content="" />
       <meta name="geo.position" content="" />
       <meta name="geo.placename" content="Rua Teste" />
       <meta name="geo.region" content="" />
       <meta name="twitter:card" content="summary">
-      <meta name="DC.Title" content="Portal Imobiliário" />
+      <meta name="DC.Title" content="Imobile Online" />
       <meta name="DC.Description" content="Ótimos Apartamentos a venda hoje. Acesse o IMOBILE e Confira. O Maior Portal do Brasil. Compre, Venda ou Alugue. + de 61 milhões de buscas." />
-      <meta name="DC.Creator" content="microsistec.com.br" />
-      <meta name="DC.Publisher" content="microsistec.com.br" />
-      <meta name="DC.Contributor" content="microsistec.com.br" />
-      <meta name="DC.Identifier" content="index.html" />
+      <meta name="DC.Creator" content="MarcoTiellet" />
+      <meta name="DC.Publisher" content="MarcoTiellet" />
+      <meta name="DC.Contributor" content="MarcoTiellet" />
+      <meta name="DC.Identifier" content="Index.cshtml" />
       <meta name="DC.Language" content="pt-br" />
       <meta name="DC.Rights" content="© Copyright 2018 - Todos os direitos reservados - Imobile Online" />
       <meta name="format-detection" content="telephone=no">
@@ -214,10 +214,16 @@
                      <a href="javascript:void(0);" class="visible-xs"><i class="fa fa-bars" aria-hidden="true"></i></a> 
                      <ul>
                         <li><span>Creci: 12074 - F</span></li>
-                        <li><a href="index.html" >Home</a></li>
+                        <li><a asp-area="" asp-controller="Home" asp-action="Index">HOME</a></li>
                         <li>
                            <a href="javascript:void(0);" class="more-item">Contato <i class="fa fa-angle-down" aria-hidden="true"></i></a> 
-                           <div class="sub-menu">  <a href="fale-conosco.html" >Fale Conosco</a>   <a href="cadastre-seu-imovel.html" >Cadastre seu Imóvel</a>   <a href="encomende-seu-imovel.html" >Imóvel sob Encomenda</a>   <a href="ligamos-para-voce.html" >Agende uma ligação</a>   <a href="trabalhe-conosco.html" >Trabalhe Conosco</a>  </div>
+                           <div class="sub-menu">
+                               <a asp-area="" asp-controller="FaleConosco" asp-action="Index">Fale Conosco</a>
+                               <a asp-area="" asp-controller="CadastroImovel" asp-action="Index">Cadastre seu Imóvel</a>
+                               <a asp-area="" asp-controller="EncomendaImovel" asp-action="Index">Imóvel sob Encomenda</a>
+                               <a asp-area="" asp-controller="AgendaLigacao" asp-action="Index">Agende uma Ligação</a>
+                               <a asp-area="" asp-controller="TrabalheConosco" asp-action="Index">Trabalhe Conosco</a>
+                           </div>
                         </li>
                      </ul>
                   </div>
@@ -233,7 +239,9 @@
                         });
                      </script>
                   </div>
-                  <div class="col-sm-3 col-xs-8 register-property pull-right"> <a href="cadastre-seu-imovel.html" class="background-theme-color hover-background-theme-color">Anuncie seu imóvel aqui</a> </div>
+                  <div class="col-sm-3 col-xs-8 register-property pull-right">
+                      <a class="background-theme-color hover-background-theme-color" asp-area="" asp-controller="CadastroImovel" asp-action="Index">Anuncie seu imóvel aqui</a>
+                  </div>
                </div>
             </section>
             <section class="content-top">
@@ -642,11 +650,11 @@
                      <hr class="background-theme-color">
                   </b>
                   <ul>
-                     <li><a href="index.html">Home</a></li>
-                     <li><a href="cadastre-seu-imovel.html">Anuncie Aqui</a></li>
-                     <li><a href="fale-conosco.html">Contato</a></li>
-                     <li><a href="mapa-do-site.html">Mapa do Site</a></li>
-                     <li><a href="#" data-toggle="modal" data-target="#modalDepoimentos">Enviar Depoimento</a></li>
+                      <li><a asp-area="" asp-controller="CadastroImovel" asp-action="Index">Home</a></li>
+                      <li><a asp-area="" asp-controller="CadastroImovel" asp-action="Index">Anuncie Aqui</a></li>
+                      <li><a asp-area="" asp-controller="FaleConosco" asp-action="Index">Contato</a></li>
+                      <li><a asp-area="" asp-controller="MapaSite" asp-action="Index">Mapa do Site</a></li>
+                      <li><a href="#" data-toggle="modal" data-target="#modalDepoimentos">Enviar Depoimento</a></li>
                   </ul>
                </div>
                <div class="col-md-3 col-sm-6 col-xs-7">
@@ -655,13 +663,13 @@
                      <hr class="background-theme-color">
                   </b>
                   <ul>
-                     <li><a href="p-apartamento-.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Apartamento</a></li>
-                     <li><a href="p-casa-.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Casa</a></li>
-                     <li><a href="p-cobertura-.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Cobertura</a></li>
-                     <li><a href="p-flat-.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Flat</a></li>
-                     <li><a href="pr-empreendimentos-futuro_lancamento-.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Futuro lançamento</a></li>
-                     <li><a href="pr-empreendimentos-pronto_para_morar-.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Pronto para morar</a></li>
-                     <li><a href="pr-empreendimentos-em_construcao-.html"><i class="fa fa-angle-double-right" aria-hidden="true"></i> Em construção</a></li>
+                      <li><a asp-area="" asp-controller="Filtro" asp-action="Index">Apartamento</a></li>
+                      <li><a asp-area="" asp-controller="Filtro" asp-action="Index">Casa</a></li>
+                      <li><a asp-area="" asp-controller="Filtro" asp-action="Index">Cobertura</a></li>
+                      <li><a asp-area="" asp-controller="Filtro" asp-action="Index">Apartamento</a></li>
+                      <li><a asp-area="" asp-controller="Filtro" asp-action="Index">Futuro Lançamento</a></li>
+                      <li><a asp-area="" asp-controller="Filtro" asp-action="Index">Pronto para Morar</a></li>
+                      <li><a asp-area="" asp-controller="Filtro" asp-action="Index">Em Construção</a></li>
                   </ul>
                </div>
                <div class="visible-sm col-sm-12 visible-xs col-xs-12"></div>
@@ -675,22 +683,22 @@
                         <article class="most-view-item">
                            <h3>Igarassu / PE<br>Saramandaia<br>Casa</h3>
                            <p>  <b>R$ 550.000,00 <small>- Venda</small></b>    </p>
-                           <a href="31-casa-em-igarassu-bairro-saramandaia.html" title="Casa com 4 dorms, Saramandaia, Igarassu - R$ 550.000,00, 280m² - Codigo: BS041">Veja mais detalhes sobre o imóvel</a> 
+                           <a asp-area="" asp-controller="Filtro" asp-action="Index" title="Casa com 4 dorms, Saramandaia, Igarassu - R$ 550.000,00, 280m² - Codigo: BS041">Veja mais detalhes sobre o imóvel</a>
                         </article>
                      </li>
                      <li>
-                        <article class="most-view-item">
-                           <h3>Camaragibe / PE<br>Nazaré<br>Apartamento</h3>
-                           <p>  <b>R$ 116.000,00 <small>- Venda</small></b>    </p>
-                           <a href="1-apartamento-em-camaragibe-bairro-nazare.html" title="Apartamento com 2 dorms, Nazaré, Camaragibe - R$ 116.000,00, 46m² - Codigo: BS027">Veja mais detalhes sobre o imóvel</a> 
-                        </article>
+                         <article class="most-view-item">
+                             <h3>Camaragibe / PE<br>Nazaré<br>Apartamento</h3>
+                             <p>  <b>R$ 116.000,00 <small>- Venda</small></b>    </p>
+                             <a asp-area="" asp-controller="Filtro" asp-action="Index" title="Apartamento com 2 dorms, Nazaré, Camaragibe - R$ 116.000,00, 46m² - Codigo: BS027">Veja mais detalhes sobre o imóvel</a>
+                         </article>
                      </li>
                      <li>
-                        <article class="most-view-item">
-                           <h3>Igarassu / PE<br>Bela Vista<br>Chácara</h3>
-                           <p>  <b>R$ 650.000,00 <small>- Venda</small></b>   <b>R$ 1.800,00 <small>- Locação</small></b>   </p>
-                           <a href="32-chacara-em-igarassu-bairro-bela-vista.html" title="Chácara com 4 dorms, Bela Vista, Igarassu - R$ 650.000,00, 214m² - Codigo: BS043">Veja mais detalhes sobre o imóvel</a> 
-                        </article>
+                         <article class="most-view-item">
+                             <h3>Igarassu / PE<br>Bela Vista<br>Chácara</h3>
+                             <p>  <b>R$ 650.000,00 <small>- Venda</small></b>   <b>R$ 1.800,00 <small>- Locação</small></b>   </p>
+                             <a asp-area="" asp-controller="Filtro" asp-action="Index" title="Chácara com 4 dorms, Bela Vista, Igarassu - R$ 650.000,00, 214m² - Codigo: BS043">Veja mais detalhes sobre o imóvel</a>
+                         </article>
                      </li>
                   </ul>
                </div>
@@ -702,7 +710,7 @@
                   <b>(81) 98807-7025</b>     
                   <article>
                      <p> <a target="_blank" href="https://www.google.com.br/maps/place/Rua Tuparetama, nº 156, Artur Lundgren I, Paulista - PE">Rua Tuparetama, nº 156, Artur Lundgren I, Paulista - PE</a> </p>
-                     <p>contato@@imobileonline.com.br</p>
+                     <p>contato@imobileonline.com.br</p>
                   </article>
                   <ul class="social-networks">
                      <li><a href="https://www.facebook.com/imobileon/" target="_blank" title="Link facebook"><i class="fa fa-facebook"></i><span>Link para o facebook da Imobile Online</span></a></li>
@@ -773,7 +781,7 @@
 </script> 
 <script src='../www.google.com/recaptcha/api.js'></script>
 <script type="text/javascript">
-   $('#FrmMaisInfoModal').submit(function (e) {
+   $('#/*FrmMaisInfoModal*/').submit(function (e) {
    
        e.preventDefault();
    
