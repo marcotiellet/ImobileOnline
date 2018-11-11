@@ -12,26 +12,8 @@ namespace ImobileOnline.Web.Controllers
     {
         public IActionResult Index()
         {
+            //Faz com que apareça o layout principal com o vídeo da praia.
             ViewBag.Message = "Principal";
-            return View();
-        }
-
-        public IActionResult About()
-        {
-            ViewData["Message"] = "Your application description page.";
-
-            return View();
-        }
-
-        public IActionResult Contact()
-        {
-            ViewData["Message"] = "Your contact page.";
-
-            return View();
-        }
-
-        public IActionResult Privacy()
-        {
             return View();
         }
 

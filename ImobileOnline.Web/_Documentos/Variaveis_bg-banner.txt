@@ -1,0 +1,11 @@
+﻿Imagem = <img srcset="https://vault.imob.online/resized/u4623/buildings/photos/36153/2nUcjASKdqmWRrDSL9lpXzJS-piscinasite2.jpg/wxlarge.jpg 1024w, https://vault.imob.online/resized/u4623/buildings/photos/36153/2nUcjASKdqmWRrDSL9lpXzJS-piscinasite2.jpg/wxlarge.jpg 768w, https://vault.imob.online/resized/u4623/buildings/photos/36153/2nUcjASKdqmWRrDSL9lpXzJS-piscinasite2.jpg/wmedium.jpg 300w" src="../vault.imob.online/resized/u4623/buildings/photos/36153/2nUcjASKdqmWRrDSL9lpXzJS-piscinasite2.jpg/wxlarge.jpg" class="img-responsive" alt="Empreendimento em Jaboatão dos Guararapes, no bairro Piedade">  <i class="ico-video"></i>
+Situação do imóvel = Em construção
+Valor do imóvel (A partir) = R$ 646.729,46
+Tipo de imóvel e Cidade = Empreendimento em Jaboatão dos Guararapes 
+Nome do Imóvel = Ocean Way
+Dormitórios = <span>Dorm.</span><br><b>3</b>
+Suítes = <span>Suítes</span><br><b>3</b>
+Vagas = <span>Vagas</span><br><b>2</b>
+Área = <span>Área m²</span><br><b>98 a 98</b>
+Texto Detalhes = <p>Sinta-se convidado a vir conhecer o decorado, por Romero Duarte, do Ocean Way. Aqui seus dias serão INCRÍVEIS e com todo o conforto desejado. Com 3 ...</p>
+Texto Mais Info no popup Contratar = textarea name="TxtMsgMaisInfo" class="form-control" cols="36" rows="3">Olá, gostaria de saber mais informações sobre o empreendimento em Jaboatão dos Guararapes no bairro Piedade a partir de: R$ 646.729,46 Ref. BS038. Aguardo o contato. Obrigado</textarea>
